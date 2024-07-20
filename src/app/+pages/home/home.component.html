@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="slide-wrapper">
+        @if ((isHandset$ | async)) {
+            <div class="slider-Handset">
+                <img #target1 src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg">
+                <img #target2 src="./../../../assets/nebula_background_1-wallpaper-1024x1024.jpg">
+                <img #target3 src="./../../../assets/stars_galaxies-wallpaper-1280x1280.jpg">
+            </div>
+            <div class="slider-nav">
+                <a (click)="scrollToElement(target1)"></a>
+                <a (click)="scrollToElement(target2)"></a>
+                <a (click)="scrollToElement(target3)"></a>
+            </div>
+        }
+        @else {
+            <div class="slider">
+                <img #target1 src="./../../../assets/wp12025774-4k-169-wallpapers.jpg">
+                <img #target2 src="./../../../assets/wp12025792.jpg">
+                <img #target3 src="./../../../assets/wp7826742-4k-uhd-wallpapers.jpg">
+            </div>
+            <div class="slider-nav">
+                <a (click)="scrollToElement(target1)"></a>
+                <a (click)="scrollToElement(target2)"></a>
+                <a (click)="scrollToElement(target3)"></a>
+            </div>
+        }
+    </div>
+</div>
