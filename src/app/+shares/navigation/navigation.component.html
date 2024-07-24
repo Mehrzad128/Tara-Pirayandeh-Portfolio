@@ -14,6 +14,21 @@
     <mat-sidenav-content>
       <mat-toolbar class="toolbar" color="tertiary">
         <div class="social-icons">
+          <input
+            type="checkbox"
+            role="button"
+            aria-label="Toggle sidenav" 
+            class="menu"
+            (click)="drawer.toggle()">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>share</mat-icon>
+            </button>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+          </button>
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
           <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
             <mat-icon>favorite</mat-icon>
           </button>
@@ -21,12 +36,6 @@
             <mat-icon>share</mat-icon>
           </button>
         </div>
-        <input
-          type="checkbox"
-          role="button"
-          aria-label="Toggle sidenav" 
-          class="menu"
-          (click)="drawer.toggle()">
           <span class="example-spacer"></span>
         <span>TaraWeblog</span>
       </mat-toolbar>
@@ -37,11 +46,18 @@
 @else {
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer class="sidenav-Handset" fixedInViewport
-        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-        [mode]="(isHandset$ | async) ? 'over' : 'side'"
-        [opened]="(isHandset$ | async) === false">
-      <mat-toolbar>Menu</mat-toolbar>
-      <mat-nav-list>
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar dir="rtl" class="handset-toggle">  
+      <button  
+      mat-icon-button 
+      (click)="drawer.toggle()"
+      aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-nav-list>
         <a mat-list-item href="#">Link 1</a>
         <a mat-list-item href="#">Link 2</a>
         <a mat-list-item href="#">Link 3</a>
@@ -50,19 +66,28 @@
     <mat-sidenav-content>
       <mat-toolbar class="toolbar" color="tertiary">
         <div class="social-icons">
+          <button  
+          mat-icon-button 
+          (click)="drawer.toggle()"
+          aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+          </button>
           <button mat-icon-button class="example-icon" aria-label="Example icon-button with heart icon">
             <mat-icon>favorite</mat-icon>
           </button>
           <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
             <mat-icon>share</mat-icon>
           </button>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+          </button>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+          </button>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+          </button>
         </div>
-        <button  
-          mat-icon-button 
-          (click)="drawer.toggle()"
-          aria-label="Example icon-button with menu icon">
-          <mat-icon>menu</mat-icon>
-        </button>
         <span class="example-spacer"></span>
         <span>TaraWeblog</span>
       </mat-toolbar>
