@@ -1,72 +1,69 @@
-.container{
-    background: rgb(25,25,25);
-    background: radial-gradient(circle, rgba(25,25,25,1) 0%, rgba(0,0,0,1) 100%);
-    height: calc(100vh - 80px);
+.container {
+  background: rgb(25, 25, 25);
+  background: radial-gradient(
+    circle,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  height: calc(100vh - 80px);
 }
 
-.slider-wrapper{
-    position: relative;
-    height: 48rem;
-    margin: 0 auto;
+.slider-wrapper {
+  position: relative;
+  height: 48rem;
+  margin: 0 auto;
 }
 
-.slider{
-    display: flex;
-    aspect-ratio: 16/6.5;
-    overflow-x: auto;
-    overflow: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+.slider {
+  display: flex;
+  aspect-ratio: 16/6.5;
+  overflow-x: auto;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
 }
 
-.slider-Handset{
-    display: flex;
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+.slider-Handset {
+  display: flex;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
 }
 
-.slider img{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit:cover;
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
 }
 
-.slider-Handset img{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit:cover;
+.slider-Handset img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
 }
 
-.slider-nav{
-    display: flex;
-    column-gap: 2rem;
-    position: relative;
-    bottom: 2rem;
-    justify-content: center;
-    z-index: 1;
+.slider-nav {
+  display: flex;
+  column-gap: 2rem;
+  position: relative;
+  bottom: 2rem;
+  justify-content: center;
+  z-index: 1;
 }
 
-.slider-nav a{
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background-color: white;
-    opacity: 75%;
-    transition: opacity ease 250ms;
+.slider-nav a {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 75%;
+  transition: opacity ease 250ms;
 }
 
-.slider-nav a:hover{
-    opacity: 1;
-}
-
-.music-player{
-    width: 400px;
-    padding: 25px 35px;
-    text-align: center;
-    background-color: aqua;
+.slider-nav a:hover {
+  opacity: 1;
 }
 
