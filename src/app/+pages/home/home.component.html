@@ -1,37 +1,193 @@
 <div class="container">
-  <div class="slide-wrapper">
-    @if ((isHandset$ | async)) {
-    <div class="slider-Handset">
-      <img
-        #target1
-        src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg"
-      />
-      <img
-        #target2
-        src="./../../../assets/nebula_background_1-wallpaper-1024x1024.jpg"
-      />
-      <img
-        #target3
-        src="./../../../assets/stars_galaxies-wallpaper-1280x1280.jpg"
-      />
-    </div>
-    <div class="slider-nav">
-      <a (click)="scrollToElement(target1)"></a>
-      <a (click)="scrollToElement(target2)"></a>
-      <a (click)="scrollToElement(target3)"></a>
-    </div>
-    } @else {
-    <div class="slider">
-      <img #target1 src="./../../../assets/wp12025774-4k-169-wallpapers.jpg" />
-      <img #target2 src="./../../../assets/wp12025792.jpg" />
-      <img #target3 src="./../../../assets/wp7826742-4k-uhd-wallpapers.jpg" />
-    </div>
-    <div class="slider-nav">
-      <a (click)="scrollToElement(target1)"></a>
-      <a (click)="scrollToElement(target2)"></a>
-      <a (click)="scrollToElement(target3)"></a>
-    </div>
+  <div class="wrapper">
+    @if (isHandset$ | async) {
+      <div class="handset-ratio" style="background-image: url(./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg);"></div>
+      <div class="handset-ratio" style="background-image: url(./../../../assets/nebula_background_1-wallpaper-1024x1024.jpg);"></div>
+      <div class="handset-ratio" style="background-image: url(./../../../assets/stars_galaxies-wallpaper-1280x1280.jpg);"></div>
+    }
+    @else if (!(isHandset$ | async)) {
+      <div style="background-image: url(./../../../assets/wp12025774-4k-169-wallpapers.jpg);"></div>
+      <div style="background-image: url(./../../../assets/wp12025792.jpg);"></div>
+      <div style="background-image: url(./../../../assets/wp7826742-4k-uhd-wallpapers.jpg);"></div>
     }
   </div>
-  <app-music-player/>
+  <section class="subject">
+    <h1> Biography </h1>
+    @if (!(isHandset$ | async)) {      
+      <div class="subject-details">      
+        <mat-accordion>
+          <mat-expansion-panel expanded="true" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+              <mat-panel-title> ABOUT TARA PIRAYANDEH </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>
+              <mat-icon class="icon">description</mat-icon>
+              Tara Pirayandeh, born on September 21, 2002, in Isfahan, Iran, is a prodigious musician and scholar. starting her musical journey at age five with the Orff method </p>
+            <p>
+              <mat-icon class="icon">description</mat-icon>
+              She quickly mastered the "Tombak" and then the "Tar" ,
+              studying under luminaries such as <a href="https://en.wikipedia.org/wiki/Hossein_Alizadeh">
+              Hossein Alizadeh</a> and <a href="https://fa.wikipedia.org/wiki/%D8%B4%D9%87%D8%B1%D8%A7%D9%85_%D9%85%DB%8C%D8%B1%D8%AC%D9%84%D8%A7%D9%84%DB%8C">
+              Shahram Mirjalali</a>.</p>
+            <p>
+              <mat-icon class="icon">description</mat-icon>
+              Tara is a high school graduate by age 13 and a member of Iran's National Elites Foundation and has been active in charitable causes,
+              including supporting children with cancer. </p>
+            <p>
+              <mat-icon class="icon">description</mat-icon>
+              She earned a bachelor's degree in Computer Science at 17 and is currently studying Film Scoring and Electronic Music Production at Berklee College of Music </p>
+            <p>
+              <mat-icon class="icon">description</mat-icon>
+              Tara continues to bridge Persian and traditional music with global audiences through her innovative work. </p>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+              <mat-panel-title> EDUCATION </mat-panel-title>
+            </mat-expansion-panel-header>
+              <p>
+                <mat-icon class="icon">school</mat-icon>
+                 <strong>Berklee college of music :</strong> Summer semester(2023) - present </p>
+              <p>
+                <mat-icon class="icon">school</mat-icon>
+                 <strong>University of Applied Science Culture and Art (Unit 1) Associate Disgreg of Music :</strong> Sep 20116 - Des 2017 </p>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    }
+    @else if ((isHandset$ | async)) {      
+      <div class="subject-details-handset">      
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+              <mat-panel-title> ABOUT TARA PIRAYANDEH </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>
+              <mat-icon class="icon">description</mat-icon>
+              Tara Pirayandeh, born on September 21, 2002, in Isfahan, Iran, is a prodigious musician and scholar</p>
+            <p>
+              <mat-icon class="icon">description</mat-icon>
+              Versatile studio professional with expertise in recording, mixing, mastering, and arranging Iranian music</p>
+            <p>
+              <mat-icon class="icon">description</mat-icon>
+              Proficient electronic music producer specializing in minimal techno</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+              <mat-panel-title> EDUCATION </mat-panel-title>
+            </mat-expansion-panel-header>
+              <p>
+                <mat-icon class="icon">school</mat-icon>
+                 <strong>Berklee college of music :</strong> Summer semester(2023) - present </p>
+              <p>
+                <mat-icon class="icon">school</mat-icon>
+                 <strong>University of Applied Science Culture and Art (Unit 1) Associate Disgreg of Music :</strong> Sep 20116 - Des 2017 </p>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    }
+    <a href="#top">      
+      <button mat-button> Performance experiment</button>
+    </a>
+    <a href="#top">
+      <button mat-button> Awards and distinctions</button>
+    </a>
+  </section>
+  <app-music-player />
+  <section class="subject">
+    <h1> Awards and honors</h1>
+    @if (isHandset$ | async) {
+      <div class="subject-details-handset">      
+        <mat-card appearance="raised">
+          <mat-card-content>
+            <p>
+              <mat-icon class="icon">star</mat-icon>
+              Ranked 1st place in the National Student Festival Neyshaboor , Iran September 2016
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 3rd place in the 18th Fajr Music of Hamadan Hamadan , Iran February 2016
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 1st place in the 34th Culture and Art National Competition Neyshaboor , Iran February 2014 and August 2015
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 3rd place in the 16th Far Music Festival of Hamadan Hamadan, Iran February 2013
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 2nd place in the 15th Fair Music Festival of Hamadan Hamadan, Iran September 2013
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 1st place in the 7th National Festival of Youth Music Tehran, Iran September 2013
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              the Phenomenon' of the 7th National Festival of Youth Music Tehran, Iran September 2013
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 1st place in the 16th Fair Music Festival of Hamadan Hamadan, Iran February 2012
+            </p>
+            <a href="#top">
+              <button mat-button>
+                Get More...
+              </button>
+            </a>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    }
+
+    @if (!(isHandset$ | async)) {
+      <div class="subject-details">      
+        <mat-card appearance="raised">
+          <mat-card-content>
+            <p>
+              <mat-icon class="icon">star</mat-icon>
+              Ranked 1st place in the National Student Festival Neyshaboor , Iran September 2016
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 3rd place in the 18th Fajr Music of Hamadan Hamadan , Iran February 2016
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 1st place in the 34th Culture and Art National Competition Neyshaboor , Iran February 2014 and August 2015
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 3rd place in the 16th Far Music Festival of Hamadan Hamadan, Iran February 2013
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 2nd place in the 15th Fair Music Festival of Hamadan Hamadan, Iran September 2013
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 1st place in the 7th National Festival of Youth Music Tehran, Iran September 2013
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              the Phenomenon' of the 7th National Festival of Youth Music Tehran, Iran September 2013
+            </p>
+            <p>
+              <mat-icon class="icon">grade</mat-icon>
+              Ranked 1st place in the 16th Fair Music Festival of Hamadan Hamadan, Iran February 2012
+            </p>
+            <a href="#top">
+              <button mat-button>
+                Get More...
+              </button>
+            </a>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    }
+  </section>
+  <section class="subject">
+    <h1> Gallery </h1>
+  </section>
 </div>

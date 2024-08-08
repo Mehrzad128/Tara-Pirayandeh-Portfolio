@@ -1,30 +1,31 @@
-import { Component } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { AsyncPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule, MatFabButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatTableModule} from '@angular/material/table';
+import { map, Observable, shareReplay } from 'rxjs';
 
 export interface PeriodicElement {
   name: string;
   position: number;
-  album:string;
-  role: string;
   duration: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', album:"Demo one" , role: "Singer", duration: '1:28'},
-  {position: 2, name: 'Helium' , album:"Demo one" , role: "Singer", duration: '1:28'},
-  {position: 3, name: 'Lithium' , album:"Demo one" , role: "musician", duration: '1:18'},
-  {position: 4, name: 'Beryllium' , album:"Demo one" ,  role: "Singer", duration: '1:51'},
-  {position: 5, name: 'Boron' , album:"Demo one" , role: "musician", duration: '1:10'},
-  {position: 6, name: 'Carbon' , album:"Demo one" ,  role: "Singer", duration: '3:10'},
-  {position: 7, name: 'Nitrogen' , album:"Demo one" , role: "musician", duration: '4:11'},
-  {position: 8, name: 'Oxygen' , album:"Demo one" ,  role: "Singer", duration: '5:00'},
-  {position: 9, name: 'Fluorine' , album:"Demo one" ,  role: "Singer", duration: '1:11'},
-  {position: 10, name: 'Neon' , album:"Demo one" , role: "musician", duration: '1:28'},
+  {position: 1, name: 'Hydrogen', duration: '1:28'},
+  {position: 2, name: 'Helium'  , duration: '1:28'},
+  {position: 3, name: 'Lithium' , duration: '1:18'},
+  {position: 4, name: 'Beryllium' , duration: '1:51'},
+  {position: 5, name: 'Boron', duration: '1:10'},
+  {position: 6, name: 'Carbon' , duration: '3:10'},
+  {position: 7, name: 'Nitrogen', duration: '4:11'},
+  {position: 8, name: 'Oxygen' , duration: '5:00'},
+  {position: 9, name: 'Fluorine' , duration: '1:11'},
+  {position: 10, name: 'Neon' , duration: '1:28'},
 ];
 
 @Component({
@@ -37,7 +38,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
     MatProgressBarModule,
     MatSliderModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    AsyncPipe
   ],
   templateUrl: './music-player.component.html',
   styleUrl: './music-player.component.scss'
@@ -50,14 +52,12 @@ export class MusicPlayerComponent {
     this.isPlaying = !this.isPlaying ;
   }
 
-  displayedColumns: string[] = ['position', 'name', 'album' , 'role', 'duration'];
+  displayedColumns: string[] = ['position', 'name', 'duration'];
   dataSource = ELEMENT_DATA;
   clickedRows = new Set<PeriodicElement>();
   selectedItem : PeriodicElement = {
     name : 'Hydrogen',
     position : 1,
-    album : 'Demo one' ,
-    role : 'Singer' ,
     duration : '1:28'
   }
 
@@ -65,12 +65,19 @@ export class MusicPlayerComponent {
     this.selectedItem = {
       name : selected.name ,
       position : selected.position,
-      album : selected.album,
-      role : selected.role,
       duration : selected.duration
     }
   }
 
+  private breakpointObserver = inject(BreakpointObserver);
+
+  isHandset$: Observable<boolean> = this.breakpointObserver
+  .observe(Breakpoints.Handset)
+  .pipe(
+    map((result) => result.matches),
+    shareReplay()
+  );
+  
 }
 
 

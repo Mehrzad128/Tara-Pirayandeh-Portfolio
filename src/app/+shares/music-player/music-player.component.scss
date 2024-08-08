@@ -9,6 +9,17 @@
   flex-wrap: wrap;
 }
 
+.wrapper-handset{
+  width: 90%;
+  padding: 30px 10px;
+  text-align: center;
+  background-color: #151618;
+  margin: auto;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .img-box {
   display: flex;
   aspect-ratio: 1/1;
@@ -64,5 +75,8 @@
 
 .mat-mdc-row:hover .mat-mdc-cell {
   border-color: currentColor;
+}
+h2,h3,h4{
+  text-align: left;
 }
 

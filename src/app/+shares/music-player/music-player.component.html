@@ -1,79 +1,148 @@
-<div class="wrapper">
-    <div class="details">
-        <div class="img-box">
-            <img src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg">
-        </div>
-        <div class="info">
-            <h2> {{selectedItem.name}} </h2>
-            <h3> {{selectedItem.album}} </h3>
-            <h4> {{selectedItem.role}} </h4>
-        </div>
-    </div>
-    <div class="controler">
-        <button class="icon" mat-fab aria-label="Example icon button with a heart icon">
-            <mat-icon>fast_rewind</mat-icon>
-          </button>
-        @if (!isPlaying) {
-            <button (click)="play()" class="icon" mat-fab aria-label="Example icon button with a heart icon">
-                <mat-icon>play_arrow</mat-icon>
-              </button>
-        }
-        @else if (isPlaying) {
-            <button (click)="play()" class="icon" mat-fab aria-label="Example icon button with a heart icon">
-                <mat-icon>pause</mat-icon>
-              </button>
-        }
-        <button class="icon mirror" mat-fab aria-label="Example icon button with a heart icon">
-            <mat-icon>fast_rewind</mat-icon>
-          </button>
-        @if (sliderValue != 0) {
-            <button (click)="sliderValue=0" class="icon" mat-fab aria-label="Example icon button with a heart icon">
-                <mat-icon>volume_up</mat-icon>
+@if (isHandset$ | async) {
+  <div class="wrapper-handset">
+      <div class="details">
+          <div class="img-box">
+              <img src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg">
+          </div>
+          <div class="info">
+              <h2> {{selectedItem.name}} </h2>
+          </div>
+      </div>
+      <div class="controler">
+          <button class="icon" mat-fab aria-label="Example icon button with a heart icon">
+              <mat-icon>fast_rewind</mat-icon>
             </button>
-        }
-        @else if (sliderValue == 0) {
-            <button class="icon" mat-fab aria-label="Example icon button with a heart icon">
-                <mat-icon>volume_off</mat-icon>
+          @if (!isPlaying) {
+              <button (click)="play()" class="icon" mat-fab aria-label="Example icon button with a heart icon">
+                  <mat-icon>play_arrow</mat-icon>
+                </button>
+          }
+          @else if (isPlaying) {
+              <button (click)="play()" class="icon" mat-fab aria-label="Example icon button with a heart icon">
+                  <mat-icon>pause</mat-icon>
+                </button>
+          }
+          <button class="icon mirror" mat-fab aria-label="Example icon button with a heart icon">
+              <mat-icon>fast_rewind</mat-icon>
             </button>
-        }
-        <mat-slider>
-            <input matSliderThumb [(ngModel)]="sliderValue">
-          </mat-slider>
-    </div>
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
-
-            <ng-container matColumnDef="position">
-              <th mat-header-cell *matHeaderCellDef>No.</th>
-              <td mat-cell *matCellDef="let element">{{element.position}}</td>
-            </ng-container>
-          
-            <ng-container matColumnDef="name">
-              <th mat-header-cell *matHeaderCellDef>Name</th>
-              <td mat-cell *matCellDef="let element">{{element.name}}</td>
-            </ng-container>
-
-            <ng-container matColumnDef="album">
-              <th mat-header-cell *matHeaderCellDef>Album</th>
-              <td mat-cell *matCellDef="let element">{{element.album}}</td>
-            </ng-container>
+          @if (sliderValue != 0) {
+              <button (click)="sliderValue=0" class="icon" mat-fab aria-label="Example icon button with a heart icon">
+                  <mat-icon>volume_up</mat-icon>
+              </button>
+          }
+          @else if (sliderValue == 0) {
+              <button class="icon" mat-fab aria-label="Example icon button with a heart icon">
+                  <mat-icon>volume_off</mat-icon>
+              </button>
+          }
+          <mat-slider>
+              <input matSliderThumb [(ngModel)]="sliderValue">
+            </mat-slider>
+      </div>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+  
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef>No.</th>
+                <td mat-cell *matCellDef="let element">{{element.position}}</td>
+              </ng-container>
             
-            <ng-container matColumnDef="role">
-              <th mat-header-cell *matHeaderCellDef>Role</th>
-              <td mat-cell *matCellDef="let element">{{element.role}}</td>
-            </ng-container>
-          
-            <ng-container matColumnDef="duration">
-              <th mat-header-cell *matHeaderCellDef>Duration</th>
-              <td mat-cell *matCellDef="let element">{{element.duration}}</td>
-            </ng-container>
-          
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr
-                mat-row
-                (click)="select(row)"
-                [class.demo-row-is-clicked]="clickedRows.has(row)"
-                *matRowDef="let row; columns: displayedColumns;"
-            ></tr>
-          </table>
-</div>
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Name</th>
+                <td mat-cell *matCellDef="let element">{{element.name}}</td>
+              </ng-container>
 
+              <ng-container matColumnDef="duration">
+                <th mat-header-cell *matHeaderCellDef>Duration</th>
+                <td mat-cell *matCellDef="let element">{{element.duration}}</td>
+              </ng-container>
+            
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr
+                  mat-row
+                  (click)="select(row)"
+                  [class.demo-row-is-clicked]="clickedRows.has(row)"
+                  *matRowDef="let row; columns: displayedColumns;"
+              ></tr>
+            </table>
+  </div>
+}  
+
+@else if (!(isHandset$ | async)) {
+  <div class="wrapper">
+      <div class="details">
+          <div class="img-box">
+              <img src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg">
+          </div>
+          <div class="info">
+              <h2> {{selectedItem.name}} </h2>
+          </div>
+      </div>
+      <div class="controler">
+          <button class="icon" mat-fab aria-label="Example icon button with a heart icon">
+              <mat-icon>fast_rewind</mat-icon>
+            </button>
+          @if (!isPlaying) {
+              <button (click)="play()" class="icon" mat-fab aria-label="Example icon button with a heart icon">
+                  <mat-icon>play_arrow</mat-icon>
+                </button>
+          }
+          @else if (isPlaying) {
+              <button (click)="play()" class="icon" mat-fab aria-label="Example icon button with a heart icon">
+                  <mat-icon>pause</mat-icon>
+                </button>
+          }
+          <button class="icon mirror" mat-fab aria-label="Example icon button with a heart icon">
+              <mat-icon>fast_rewind</mat-icon>
+            </button>
+          @if (sliderValue != 0) {
+              <button (click)="sliderValue=0" class="icon" mat-fab aria-label="Example icon button with a heart icon">
+                  <mat-icon>volume_up</mat-icon>
+              </button>
+          }
+          @else if (sliderValue == 0) {
+              <button class="icon" mat-fab aria-label="Example icon button with a heart icon">
+                  <mat-icon>volume_off</mat-icon>
+              </button>
+          }
+          <mat-slider>
+              <input matSliderThumb [(ngModel)]="sliderValue">
+            </mat-slider>
+      </div>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+  
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef>No.</th>
+                <td mat-cell *matCellDef="let element">{{element.position}}</td>
+              </ng-container>
+            
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Name</th>
+                <td mat-cell *matCellDef="let element">{{element.name}}</td>
+              </ng-container>
+  
+              <ng-container matColumnDef="album">
+                <th mat-header-cell *matHeaderCellDef>Album</th>
+                <td mat-cell *matCellDef="let element">{{element.album}}</td>
+              </ng-container>
+              
+              <ng-container matColumnDef="role">
+                <th mat-header-cell *matHeaderCellDef>Role</th>
+                <td mat-cell *matCellDef="let element">{{element.role}}</td>
+              </ng-container>
+            
+              <ng-container matColumnDef="duration">
+                <th mat-header-cell *matHeaderCellDef>Duration</th>
+                <td mat-cell *matCellDef="let element">{{element.duration}}</td>
+              </ng-container>
+            
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr
+                  mat-row
+                  (click)="select(row)"
+                  [class.demo-row-is-clicked]="clickedRows.has(row)"
+                  *matRowDef="let row; columns: displayedColumns;"
+              ></tr>
+            </table>
+  </div>
+
+}  
