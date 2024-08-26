@@ -94,7 +94,7 @@
   </section>
   <app-music-player />
   <section class="subject">
-    <h1> Awards and honors</h1>
+    <h1> Awards & Honors</h1>
     @if (isHandset$ | async) {
       <div class="subject-details-handset">      
         <mat-card appearance="raised">
@@ -187,7 +187,33 @@
       </div>
     }
   </section>
+
+  <section class="subject">
+    <h1> Interviews </h1>
+    <div class="subject-details">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title> Australian Shepherd</mat-card-title>
+          <mat-card-subtitle>Herding group</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-button>Learn More</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </section>
+
   <section class="subject">
     <h1> Gallery </h1>
+    <div class="subject-details">
+      <app-gallery/>
+    </div>
+  </section>
+
+  <section class="subject">
+    <h1> Videos </h1>
+    <div class="subject-details">
+      <app-videos/>
+    </div>
   </section>
 </div>

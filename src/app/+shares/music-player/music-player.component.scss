@@ -1,5 +1,5 @@
 .wrapper {
-  width: 50%;
+  width: 60%;
   padding: 25px 35px;
   text-align: center;
   background-color: #151618;
@@ -33,6 +33,10 @@
   border-radius: 50%;
 }
 
+.info{
+  width: 100%;
+}
+
 .icon {
   border-radius: 50%;
   background-color: #151618;
@@ -46,7 +50,6 @@
 .controler{
     background-color: #e5e4e0;
     border-radius: 15px;
-    margin: auto;
     width: 100%;
     padding: 1rem 0;
     display: flex;
@@ -56,15 +59,13 @@
 }
 .details{
   margin-bottom: 1rem;
+  width: 100%;
   display: flex;
 }
 
-.item{
-  width: 100%;
-}
-
-.demo-table {
-  width: 100%;
+.table{
+  width: 48%;
+  padding: 0 1%;
 }
 
 .mat-mdc-row .mat-mdc-cell {
@@ -80,3 +81,12 @@ h2,h3,h4{
   text-align: left;
 }
 
+h1{
+  text-align: center;
+}
+
+@media screen and (max-width: 440px) {
+  .wrapper-handset{
+    width: fit-content;
+  }
+}

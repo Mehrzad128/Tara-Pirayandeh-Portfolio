@@ -4,11 +4,13 @@ import { map, Observable, shareReplay } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MusicPlayerComponent } from "../../+shares/music-player/music-player.component";
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule} from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule} from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule} from '@angular/material/grid-list';
+import { GalleryComponent } from "../../+shares/gallery/gallery.component";
+import { VideosComponent } from "../../+shares/videos/videos.component";
 
 export interface Tile {
   color: string;
@@ -22,13 +24,13 @@ export interface Tile {
   standalone: true,
   imports: [AsyncPipe,
     RouterOutlet,
-    MusicPlayerComponent, 
-    MatExpansionModule, 
-    MatButtonModule, 
-    MatCardModule, 
+    MusicPlayerComponent,
+    MatExpansionModule,
+    MatButtonModule,
+    MatCardModule,
     MatIconModule,
-    MatGridListModule
-  ],
+    MatGridListModule,
+    GalleryComponent, VideosComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

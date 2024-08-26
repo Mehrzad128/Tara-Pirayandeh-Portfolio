@@ -1,0 +1,41 @@
+@if (isHandset$ | async) {
+  <mat-card class="card-handset">
+    <mat-card-header>
+      <mat-card-title-group>
+        <div class="photo-handset">
+          <a href="https://www.youtube.com">
+            <button class="play-logo-handset" mat-fab>
+              <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#e8eaed"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>
+            </button>
+          </a>
+        </div>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content class="content">
+      <mat-card-title>
+        Mohammad Reza Shajarian: NPR Music Tiny Desk Concert
+      </mat-card-title>
+      <mat-card-subtitle>long text</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+}
+
+@else if (!(isHandset$ | async)) {
+  <mat-card class="card" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>
+          Mohammad Reza Shajarian: NPR Music Tiny Desk Concert
+        </mat-card-title>
+        <mat-card-subtitle>long text</mat-card-subtitle>
+        <div class="photo">
+          <a href="https://www.youtube.com">
+            <button class="play-logo" mat-fab>
+              <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#e8eaed"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg>
+            </button>
+          </a>
+        </div>
+      </mat-card-title-group>
+    </mat-card-header>
+  </mat-card>
+}

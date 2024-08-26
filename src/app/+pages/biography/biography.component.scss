@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    background: rgb(25, 25, 25);
+    background: radial-gradient(
+      circle,
+      rgba(25, 25, 25, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+}
+
+.header{
+    height: fit-content;
+}
+
+h1{
+    font-size: 4rem ;
+    font-weight:bold;
+}
+
+.details{
+    width: 90%;
+}
