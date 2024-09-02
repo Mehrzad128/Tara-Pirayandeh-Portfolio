@@ -92,3 +92,25 @@
   outline: 2px solid var(--c);
   outline-offset: 5px;
 }
+
+a{
+  color: currentColor;
+}
+
+.copyright{
+  display: flex;
+  flex-wrap: wrap;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  transform: translatey(-80px);
+  color: white;
+  padding-top: 10px;
+  z-index: 5;
+}
+
+p{
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}

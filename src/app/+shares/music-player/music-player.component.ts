@@ -9,23 +9,24 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatTableModule} from '@angular/material/table';
 import { map, Observable, shareReplay } from 'rxjs';
 
-export interface PeriodicElement {
+export interface musicList {
   name: string;
   position: number;
   duration: string;
+  src: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', duration: '1:28'},
-  {position: 2, name: 'Helium'  , duration: '1:28'},
-  {position: 3, name: 'Lithium' , duration: '1:18'},
-  {position: 4, name: 'Beryllium' , duration: '1:51'},
-  {position: 5, name: 'Boron', duration: '1:10'},
-  {position: 6, name: 'Carbon' , duration: '3:10'},
-  {position: 7, name: 'Nitrogen', duration: '4:11'},
-  {position: 8, name: 'Oxygen' , duration: '5:00'},
-  {position: 9, name: 'Fluorine' , duration: '1:11'},
-  {position: 10, name: 'Neon' , duration: '1:28'},
+const ELEMENT_DATA: musicList[] = [
+  {position: 1, name: 'Hydrogen', duration: '1:28' , src:''},
+  {position: 2, name: 'Helium'  , duration: '1:28', src:''},
+  {position: 3, name: 'Lithium' , duration: '1:18', src:''},
+  {position: 4, name: 'Beryllium' , duration: '1:51', src:''},
+  {position: 5, name: 'Boron', duration: '1:10', src:''},
+  {position: 6, name: 'Carbon' , duration: '3:10', src:''},
+  {position: 7, name: 'Nitrogen', duration: '4:11', src:''},
+  {position: 8, name: 'Oxygen' , duration: '5:00', src:''},
+  {position: 9, name: 'Fluorine' , duration: '1:11', src:''},
+  {position: 10, name: 'Neon' , duration: '1:28', src:''},
 ];
 
 @Component({
@@ -54,18 +55,20 @@ export class MusicPlayerComponent {
 
   displayedColumns: string[] = ['position', 'name', 'duration'];
   dataSource = ELEMENT_DATA;
-  clickedRows = new Set<PeriodicElement>();
-  selectedItem : PeriodicElement = {
+  clickedRows = new Set<musicList>();
+  selectedItem : musicList = {
     name : 'Hydrogen',
     position : 1,
-    duration : '1:28'
+    duration : '1:28',
+    src:''
   }
 
-  select(selected : PeriodicElement){
+  select(selected : musicList){
     this.selectedItem = {
       name : selected.name ,
       position : selected.position,
-      duration : selected.duration
+      duration : selected.duration,
+      src : selected.src
     }
   }
 
