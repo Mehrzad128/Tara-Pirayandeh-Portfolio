@@ -43,41 +43,7 @@ export class MusicPlayerComponent {
 
 @ViewChild('audio') audio? : ElementRef<HTMLAudioElement>;
 
-  isPlaying : boolean = false
-  sliderValue : number = 100 ;
-  volume: number = this.sliderValue/100;
-  
-  
-  play(){
-    this.isPlaying = true ;
-    this.audio?.nativeElement.play();
-    if(this.audio){
-      console.log(this.audio.nativeElement.duration);
-    }
-  }
-
-  pause(){
-    this.isPlaying = false ;
-    this.audio?.nativeElement.pause();
-}
-
-  mute(){
-    if(this.audio){
-      this.audio.nativeElement.volume = 0;
-    }
-    else {
-      console.log('error');
-    }
-    this.sliderValue = 0;
-  }
-
-  next(){
-    
-  }
-
-  prev(){
-    
-  }
+  isPlaying : boolean = this.audio?.nativeElement.paused ?? false;
 
   displayedColumns: string[] = ['position', 'name', 'duration'];
   dataSource = vocals;

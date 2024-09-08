@@ -35,7 +35,7 @@ export class GalleryComponent {
     {id: 5, source: './../../../assets/IMG_0408.jpg', title: '', subTitile: ''},
     {id: 6, source: './../../../assets/Snapseed.jpg', title: '', subTitile: ''},
     {id: 7, source: './../../../assets/Facetune_05-05-2024-01-23-48_jpg.jpg', title: '', subTitile: ''},
-    {id: 8, source: './../../../assets/IMG_3655 2.jpg', title: '', subTitile: ''},
+    {id: 8, source: './../../../assets/IMG_1214.jpg', title: '', subTitile: ''},
   ];
 
   sotoon1 = this.galleryImages.filter(m=> m.id < 3);

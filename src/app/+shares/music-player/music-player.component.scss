@@ -48,10 +48,7 @@
 }
 
 .controler{
-    background-color: #e5e4e0;
-    border-radius: 15px;
     width: 100%;
-    padding: 1rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,6 +63,10 @@
 .table{
   width: 48%;
   padding: 0 1%;
+}
+
+audio{
+  width: 100%;
 }
 
 .mat-mdc-row .mat-mdc-cell {
@@ -96,5 +97,8 @@ h1{
 @media screen and (max-width: 440px) {
   .wrapper-handset{
     width: fit-content;
+  }
+  .img-box{
+    height: 8rem;
   }
 }

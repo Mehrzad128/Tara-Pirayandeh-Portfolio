@@ -1,5 +1,3 @@
-<audio #audio [src]="selectedItem.src" controls></audio>
-
 @if (isHandset$ | async) {
 <div class="wrapper-handset">
   <div class="details">
@@ -18,36 +16,10 @@
     }
     <div class="info">
       <h2>{{ selectedItem.name }}</h2>
+      <div class="controler">
+        <audio #audio [src]="selectedItem.src" controls></audio>
+      </div>
     </div>
-  </div>
-  <div class="controler">
-    <button (click)="prev()" class="icon" mat-fab>
-      <mat-icon>fast_rewind</mat-icon>
-    </button>
-    @if (!isPlaying) {
-    <button (click)="play()" class="icon" mat-fab>
-      <mat-icon>play_arrow</mat-icon>
-    </button>
-    } @else if (isPlaying) {
-    <button (click)="pause()" class="icon" mat-fab>
-      <mat-icon>pause</mat-icon>
-    </button>
-    }
-    <button (click)="next()" class="icon mirror" mat-fab>
-      <mat-icon>fast_rewind</mat-icon>
-    </button>
-    @if (sliderValue != 0) {
-    <button (click)="mute()" class="icon" mat-fab>
-      <mat-icon>volume_up</mat-icon>
-    </button>
-    } @else if (sliderValue == 0) {
-    <button class="icon" mat-fab>
-      <mat-icon>volume_off</mat-icon>
-    </button>
-    }
-    <mat-slider style="width: 60px;">
-      <input matSliderThumb [(ngModel)]="sliderValue" />
-    </mat-slider>
   </div>
   <div style="width: 100%">
     <h1>vocals</h1>
@@ -130,35 +102,7 @@
     }
     <div class="info">
       <h2>{{ selectedItem.name }}</h2>
-      <div class="controler">
-        <button (click)="prev()" class="icon" mat-fab>
-          <mat-icon>fast_rewind</mat-icon>
-        </button>
-        @if (!isPlaying) {
-        <button (click)="play()" class="icon" mat-fab>
-          <mat-icon>play_arrow</mat-icon>
-        </button>
-        } @else if (isPlaying) {
-        <button (click)="pause()" class="icon" mat-fab>
-          <mat-icon>pause</mat-icon>
-        </button>
-        }
-        <button (click)="next()" class="icon mirror" mat-fab>
-          <mat-icon>fast_rewind</mat-icon>
-        </button>
-        @if (sliderValue != 0) {
-        <button (click)="mute()" class="icon" mat-fab>
-          <mat-icon>volume_up</mat-icon>
-        </button>
-        } @else if (sliderValue == 0) {
-        <button class="icon" mat-fab>
-          <mat-icon>volume_off</mat-icon>
-        </button>
-        }
-        <mat-slider style="width: 60px;">
-          <input matSliderThumb [(ngModel)]="sliderValue" />
-        </mat-slider>
-      </div>
+        <audio #audio class="controler"  [src]="selectedItem.src" controls></audio>
     </div>
   </div>
   <div class="table">
