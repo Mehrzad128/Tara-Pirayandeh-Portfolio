@@ -85,6 +85,14 @@ h1{
   text-align: center;
 }
 
+.rotation{
+  animation: rotate360 15s linear infinite;
+}
+
+@keyframes rotate360 {
+  100% {transform: rotate(360deg);}
+}
+
 @media screen and (max-width: 440px) {
   .wrapper-handset{
     width: fit-content;

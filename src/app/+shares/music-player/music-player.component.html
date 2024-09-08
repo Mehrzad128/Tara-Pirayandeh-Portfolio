@@ -1,62 +1,51 @@
+<audio #audio [src]="selectedItem.src" controls></audio>
+
 @if (isHandset$ | async) {
 <div class="wrapper-handset">
   <div class="details">
+    @if (isPlaying) {
+    <div class="img-box rotation">
+      <img
+        src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg"
+      />
+    </div>
+    } @else if (!isPlaying) {
     <div class="img-box">
       <img
         src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg"
       />
     </div>
+    }
     <div class="info">
       <h2>{{ selectedItem.name }}</h2>
     </div>
   </div>
   <div class="controler">
-    <button
-      class="icon"
-      mat-fab
-    >
+    <button (click)="prev()" class="icon" mat-fab>
       <mat-icon>fast_rewind</mat-icon>
     </button>
     @if (!isPlaying) {
-    <button
-      (click)="play()"
-      class="icon"
-      mat-fab
-    >
+    <button (click)="play()" class="icon" mat-fab>
       <mat-icon>play_arrow</mat-icon>
     </button>
     } @else if (isPlaying) {
-    <button
-      (click)="play()"
-      class="icon"
-      mat-fab
-    >
+    <button (click)="pause()" class="icon" mat-fab>
       <mat-icon>pause</mat-icon>
     </button>
     }
-    <button
-      class="icon mirror"
-      mat-fab
-    >
+    <button (click)="next()" class="icon mirror" mat-fab>
       <mat-icon>fast_rewind</mat-icon>
     </button>
     @if (sliderValue != 0) {
-    <button
-      (click)="sliderValue = 0"
-      class="icon"
-      mat-fab
-    >
+    <button (click)="mute()" class="icon" mat-fab>
       <mat-icon>volume_up</mat-icon>
     </button>
     } @else if (sliderValue == 0) {
-    <button
-      class="icon"
-      mat-fab
-    >
+    <button class="icon" mat-fab>
       <mat-icon>volume_off</mat-icon>
     </button>
     }
-    <mat-slider>
+    <mat-slider style="width: 60px;">
       <input matSliderThumb [(ngModel)]="sliderValue" />
     </mat-slider>
   </div>
@@ -92,7 +81,7 @@
     </table>
   </div>
   <div style="width: 100%">
-    <h1>vocals</h1>
+    <h1>performances</h1>
     <table
       mat-table
       [dataSource]="dataSource"
@@ -126,60 +115,47 @@
 } @else if (!(isHandset$ | async)) {
 <div class="wrapper">
   <div class="details">
+    @if (isPlaying) {
+    <div class="img-box rotation">
+      <img
+        src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg"
+      />
+    </div>
+    } @else if (!isPlaying) {
     <div class="img-box">
       <img
         src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg"
       />
     </div>
+    }
     <div class="info">
       <h2>{{ selectedItem.name }}</h2>
       <div class="controler">
-        <button
-          class="icon"
-          mat-fab
-        >
+        <button (click)="prev()" class="icon" mat-fab>
           <mat-icon>fast_rewind</mat-icon>
         </button>
         @if (!isPlaying) {
-        <button
-          (click)="play()"
-          class="icon"
-          mat-fab
-        >
+        <button (click)="play()" class="icon" mat-fab>
           <mat-icon>play_arrow</mat-icon>
         </button>
         } @else if (isPlaying) {
-        <button
-          (click)="play()"
-          class="icon"
-          mat-fab
-        >
+        <button (click)="pause()" class="icon" mat-fab>
           <mat-icon>pause</mat-icon>
         </button>
         }
-        <button
-          class="icon mirror"
-          mat-fab
-        >
+        <button (click)="next()" class="icon mirror" mat-fab>
           <mat-icon>fast_rewind</mat-icon>
         </button>
         @if (sliderValue != 0) {
-        <button
-          (click)="sliderValue = 0"
-          class="icon"
-          mat-fab
-        >
+        <button (click)="mute()" class="icon" mat-fab>
           <mat-icon>volume_up</mat-icon>
         </button>
         } @else if (sliderValue == 0) {
-        <button
-          class="icon"
-          mat-fab
-        >
+        <button class="icon" mat-fab>
           <mat-icon>volume_off</mat-icon>
         </button>
         }
-        <mat-slider>
+        <mat-slider style="width: 60px;">
           <input matSliderThumb [(ngModel)]="sliderValue" />
         </mat-slider>
       </div>
@@ -227,7 +203,7 @@
     </table>
   </div>
   <div class="table">
-    <h1>vocals</h1>
+    <h1>performances</h1>
     <table
       mat-table
       [dataSource]="dataSource"

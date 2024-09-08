@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule, MatFabButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
@@ -14,19 +14,13 @@ export interface musicList {
   position: number;
   duration: string;
   src: string;
+  cover:string;
 }
 
-const ELEMENT_DATA: musicList[] = [
-  {position: 1, name: 'Hydrogen', duration: '1:28' , src:''},
-  {position: 2, name: 'Helium'  , duration: '1:28', src:''},
-  {position: 3, name: 'Lithium' , duration: '1:18', src:''},
-  {position: 4, name: 'Beryllium' , duration: '1:51', src:''},
-  {position: 5, name: 'Boron', duration: '1:10', src:''},
-  {position: 6, name: 'Carbon' , duration: '3:10', src:''},
-  {position: 7, name: 'Nitrogen', duration: '4:11', src:''},
-  {position: 8, name: 'Oxygen' , duration: '5:00', src:''},
-  {position: 9, name: 'Fluorine' , duration: '1:11', src:''},
-  {position: 10, name: 'Neon' , duration: '1:28', src:''},
+const vocals: musicList[] = [
+  {position: 1, name: 'Hydrogen', duration: '3:24' , src:'./../../../assets/Imagine Dragons - Believer [320].mp3' , cover:''},
+  {position: 2, name: 'Helium'  , duration: '3:37', src:'./../../../assets/music-player_music_summer.mp3', cover:''},
+  {position: 3, name: 'Lithium' , duration: '2:26', src:'./../../../assets/music-player_music_ukulele.mp3', cover:''},
 ];
 
 @Component({
@@ -46,21 +40,54 @@ const ELEMENT_DATA: musicList[] = [
   styleUrl: './music-player.component.scss'
 })
 export class MusicPlayerComponent {
+
+@ViewChild('audio') audio? : ElementRef<HTMLAudioElement>;
+
   isPlaying : boolean = false
   sliderValue : number = 100 ;
+  volume: number = this.sliderValue/100;
+  
   
   play(){
-    this.isPlaying = !this.isPlaying ;
+    this.isPlaying = true ;
+    this.audio?.nativeElement.play();
+    if(this.audio){
+      console.log(this.audio.nativeElement.duration);
+    }
+  }
+
+  pause(){
+    this.isPlaying = false ;
+    this.audio?.nativeElement.pause();
+}
+
+  mute(){
+    if(this.audio){
+      this.audio.nativeElement.volume = 0;
+    }
+    else {
+      console.log('error');
+    }
+    this.sliderValue = 0;
+  }
+
+  next(){
+    
+  }
+
+  prev(){
+    
   }
 
   displayedColumns: string[] = ['position', 'name', 'duration'];
-  dataSource = ELEMENT_DATA;
+  dataSource = vocals;
   clickedRows = new Set<musicList>();
   selectedItem : musicList = {
     name : 'Hydrogen',
     position : 1,
     duration : '1:28',
-    src:''
+    src:'./../../../assets/Imagine Dragons - Believer [320].mp3',
+    cover:''
   }
 
   select(selected : musicList){
@@ -68,8 +95,10 @@ export class MusicPlayerComponent {
       name : selected.name ,
       position : selected.position,
       duration : selected.duration,
-      src : selected.src
+      src : selected.src,
+      cover: selected.cover
     }
+    this.isPlaying = false;
   }
 
   private breakpointObserver = inject(BreakpointObserver);
