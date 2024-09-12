@@ -17,10 +17,12 @@ export interface musicList {
   cover:string;
 }
 
-const vocals: musicList[] = [
-  {position: 1, name: 'Hydrogen', duration: '3:24' , src:'./../../../assets/Imagine Dragons - Believer [320].mp3' , cover:''},
-  {position: 2, name: 'Helium'  , duration: '3:37', src:'./../../../assets/music-player_music_summer.mp3', cover:''},
-  {position: 3, name: 'Lithium' , duration: '2:26', src:'./../../../assets/music-player_music_ukulele.mp3', cover:''},
+const performances: musicList[] = [
+  {position: 1, name: 'Azizam', duration: '5:29' , src:'./../../../assets/VID_20240323_121714_275.mp3' , cover:''},
+  {position: 2, name: 'Leili Savanam'  , duration: '5:01', src:'./../../../assets/leili bavanam 2-20-24.mp3', cover:''},
+  {position: 3, name: 'Gash Sabakh' , duration: '4:22', src:'./../../../assets/gash sabakh 2-19-24.mp3', cover:''},
+  {position: 4, name: 'Fasle Gol' , duration: '5:00', src:'./../../../assets/Fasle Gol 2-17-24.mp3', cover:''},
+  {position: 5, name: 'Hey Binam' , duration: '4:05', src:'./../../../assets/Hey binam 2-19-24.mp3', cover:''},
 ];
 
 @Component({
@@ -41,19 +43,15 @@ const vocals: musicList[] = [
 })
 export class MusicPlayerComponent {
 
-@ViewChild('audio') audio? : ElementRef<HTMLAudioElement>;
-
-  isPlaying : boolean = this.audio?.nativeElement.paused ?? false;
-
   displayedColumns: string[] = ['position', 'name', 'duration'];
-  dataSource = vocals;
+  dataSource = performances;
   clickedRows = new Set<musicList>();
   selectedItem : musicList = {
-    name : 'Hydrogen',
+    name : 'Azizam',
     position : 1,
     duration : '1:28',
-    src:'./../../../assets/Imagine Dragons - Believer [320].mp3',
-    cover:''
+    src:'./../../../assets/VID_20240323_121714_275.mp3',
+    cover:'',
   }
 
   select(selected : musicList){
@@ -62,9 +60,8 @@ export class MusicPlayerComponent {
       position : selected.position,
       duration : selected.duration,
       src : selected.src,
-      cover: selected.cover
+      cover: selected.cover,
     }
-    this.isPlaying = false;
   }
 
   private breakpointObserver = inject(BreakpointObserver);

@@ -1,25 +1,20 @@
 @if (isHandset$ | async) {
 <div class="wrapper-handset">
   <div class="details">
-    @if (isPlaying) {
-    <div class="img-box rotation">
-      <img
-        src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg"
-      />
-    </div>
-    } @else if (!isPlaying) {
     <div class="img-box">
       <img
         src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg"
       />
     </div>
-    }
     <div class="info">
       <h2>{{ selectedItem.name }}</h2>
       <div class="controler">
-        <audio #audio [src]="selectedItem.src" controls></audio>
+        <audio #audio [src]="selectedItem.src" controls controlsList="nodownload"></audio>
       </div>
     </div>
+  </div>
+  <div class="controler hidden">
+    <audio #audio [src]="selectedItem.src" controls controlsList="nodownload"></audio>
   </div>
   <div style="width: 100%">
     <h1>vocals</h1>
@@ -87,22 +82,14 @@
 } @else if (!(isHandset$ | async)) {
 <div class="wrapper">
   <div class="details">
-    @if (isPlaying) {
-    <div class="img-box rotation">
-      <img
-        src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg"
-      />
-    </div>
-    } @else if (!isPlaying) {
     <div class="img-box">
       <img
         src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg"
       />
     </div>
-    }
     <div class="info">
       <h2>{{ selectedItem.name }}</h2>
-        <audio #audio class="controler"  [src]="selectedItem.src" controls></audio>
+        <audio #audio class="controler"  [src]="selectedItem.src" controls controlsList="nodownload"></audio>
     </div>
   </div>
   <div class="table">

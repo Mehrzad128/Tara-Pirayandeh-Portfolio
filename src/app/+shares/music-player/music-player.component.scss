@@ -86,12 +86,8 @@ h1{
   text-align: center;
 }
 
-.rotation{
-  animation: rotate360 15s linear infinite;
-}
-
-@keyframes rotate360 {
-  100% {transform: rotate(360deg);}
+.hidden{
+  display: none;
 }
 
 @media screen and (max-width: 440px) {
@@ -100,5 +96,17 @@ h1{
   }
   .img-box{
     height: 8rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .controler{
+    display: none;
+  }
+  .hidden{
+    display: block;
+  }
+  .details{
+    align-items: center;
   }
 }
