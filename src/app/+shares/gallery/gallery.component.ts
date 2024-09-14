@@ -6,8 +6,6 @@ import { AsyncPipe } from '@angular/common';
 export interface image {
   id: number;
   source: string;
-  title: string;
-  subTitile: string;
 }
 
 @Component({
@@ -28,14 +26,14 @@ export class GalleryComponent {
     );
 
   galleryImages: image[] = [
-    {id: 1, source: './../../../assets/Tezza-8812.jpg', title: '', subTitile: ''},
-    {id: 2, source: './../../../assets/Facetune_05-05-2024-01-43-59.jpg', title: '', subTitile: ''},
-    {id: 3, source: './../../../assets/FullSizeRender.jpg',title: '',subTitile: ''},
-    {id: 4, source: './../../../assets/IMG_3655 2.jpg', title: '', subTitile: ''},
-    {id: 5, source: './../../../assets/IMG_0408.jpg', title: '', subTitile: ''},
-    {id: 6, source: './../../../assets/Snapseed.jpg', title: '', subTitile: ''},
-    {id: 7, source: './../../../assets/Facetune_05-05-2024-01-23-48_jpg.jpg', title: '', subTitile: ''},
-    {id: 8, source: './../../../assets/IMG_1214.jpg', title: '', subTitile: ''},
+    {id: 1, source: './../../../assets/TaraPirayandeh.galleryImage1.jpg'},
+    {id: 2, source: './../../../assets/TaraPirayandeh.galleryImage8.JPG'},
+    {id: 3, source: './../../../assets/TaraPirayandeh.galleryImage3.jpg'},
+    {id: 4, source: './../../../assets/TaraPirayandeh.galleryImage4 (VOA).jpg'},
+    {id: 5, source: './../../../assets/TaraPirayandeh.galleryImage5.jpg'},
+    {id: 6, source: './../../../assets/TaraPirayandeh.galleryImage6 (VOA).jpg'},
+    {id: 7, source: './../../../assets/TaraPirayandeh.galleryImage7.jpg'},
+    {id: 8, source: './../../../assets/TaraPirayandeh.galleryImage2.jpg'},
   ];
 
   sotoon1 = this.galleryImages.filter(m=> m.id < 3);

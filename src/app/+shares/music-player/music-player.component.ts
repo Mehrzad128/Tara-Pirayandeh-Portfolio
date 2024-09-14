@@ -49,7 +49,7 @@ export class MusicPlayerComponent {
   selectedItem : musicList = {
     name : 'Azizam',
     position : 1,
-    duration : '1:28',
+    duration : '5:29',
     src:'./../../../assets/VID_20240323_121714_275.mp3',
     cover:'',
   }
