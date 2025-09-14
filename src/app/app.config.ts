@@ -7,8 +7,10 @@ import { FormControl } from '@angular/forms';
 import { IMAGE_CONFIG } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideAnimationsAsync() ,
+  providers: [
+    provideRouter(routes),
+    provideAnimationsAsync(),
     importProvidersFrom(FormControl),
-    {provide: IMAGE_CONFIG, useValue: { disableImageSizeWarning: true}},
-   ]
+    { provide: IMAGE_CONFIG, useValue: { disableImageSizeWarning: true } },
+  ],
 };

@@ -1,25 +1,24 @@
-.container{
-    display: flex;
-    flex-wrap:wrap;
+.container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .slide {
-    flex: 20%;
-    max-width: 25%;
-    height: fit-content;
-    padding: 1%;
-  }
+  flex: 20%;
+  max-width: 25%;
+  height: fit-content;
+  padding: 1%;
+}
 
-.slide img{
-    margin-top: 5%;
-    vertical-align: middle;
-    height: 95%;
-    width: 95%;
+.slide img {
+  margin-top: 5%;
+  vertical-align: middle;
+  height: 95%;
+  width: 95%;
 }
 
 @media screen and (max-width: 960px) {
   .slide {
-
     max-width: 49.999%;
   }
 }

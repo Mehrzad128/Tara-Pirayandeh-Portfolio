@@ -14,10 +14,6 @@
   width: 60%;
 }
 
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
 .toolbar {
   height: 80px;
   position: sticky;
@@ -31,7 +27,7 @@
   z-index: 1;
   padding-right: 0;
 }
-.example-spacer {
+.spacer {
   flex: 1 1 auto;
 }
 
@@ -93,23 +89,23 @@
   outline-offset: 5px;
 }
 
-a{
+a {
   color: currentColor;
 }
 
-.copyright{
+.copyright {
   display: flex;
   flex-wrap: wrap;
   height: 80px;
   width: 100%;
   position: absolute;
-  transform: translatey(-80px);
+  transform: translatey(-5rem);
   color: white;
   padding-top: 10px;
   z-index: 5;
 }
 
-p{
+p {
   width: 100%;
   text-align: center;
   margin: 0;

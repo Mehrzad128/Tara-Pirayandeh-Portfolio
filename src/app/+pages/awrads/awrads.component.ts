@@ -6,8 +6,6 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [MatIconModule],
   templateUrl: './awrads.component.html',
-  styleUrl: './awrads.component.scss'
+  styleUrl: './awrads.component.scss',
 })
-export class AwradsComponent {
-
-}
+export class AwradsComponent {}

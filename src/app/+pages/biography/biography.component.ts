@@ -5,10 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-biography',
   standalone: true,
-  imports: [MatCardModule,MatIconModule],
+  imports: [MatCardModule, MatIconModule],
   templateUrl: './biography.component.html',
-  styleUrl: './biography.component.scss'
+  styleUrl: './biography.component.scss',
 })
-export class BiographyComponent {
-
-}
+export class BiographyComponent {}
