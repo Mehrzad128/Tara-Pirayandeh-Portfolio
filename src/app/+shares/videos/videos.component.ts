@@ -5,7 +5,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { map, Observable, shareReplay } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { AsyncPipe } from '@angular/common';
-import { MatDivider } from '@angular/material/divider';
 
 
 @Component({
@@ -16,7 +15,6 @@ import { MatDivider } from '@angular/material/divider';
     MatIconModule,
     MatButtonModule,
     AsyncPipe,
-    MatDivider
   ],
   templateUrl: './videos.component.html',
   styleUrl: './videos.component.scss'

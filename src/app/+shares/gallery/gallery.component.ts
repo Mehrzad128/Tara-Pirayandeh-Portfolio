@@ -26,20 +26,20 @@ export class GalleryComponent {
     );
 
   galleryImages: image[] = [
-    { id: 1, source: './../../../assets/TaraPirayandeh.galleryImage1.jpg' },
-    { id: 2, source: './../../../assets/TaraPirayandeh.galleryImage8.JPG' },
-    { id: 3, source: './../../../assets/TaraPirayandeh.galleryImage3.jpg' },
+    { id: 1, source: './../../../assets/images/TaraPirayandeh.galleryImage1.jpg' },
+    { id: 2, source: './../../../assets/images/TaraPirayandeh.galleryImage8.JPG' },
+    { id: 3, source: './../../../assets/images/TaraPirayandeh.galleryImage3.jpg' },
     {
       id: 4,
-      source: './../../../assets/TaraPirayandeh.galleryImage4 (VOA).jpg',
+      source: './../../../assets/images/TaraPirayandeh.galleryImage4.JPG',
     },
-    { id: 5, source: './../../../assets/TaraPirayandeh.galleryImage5.jpg' },
+    { id: 5, source: './../../../assets/images/TaraPirayandeh.galleryImage5.jpg' },
     {
       id: 6,
-      source: './../../../assets/TaraPirayandeh.galleryImage6 (VOA).jpg',
+      source: './../../../assets/images/TaraPirayandeh.galleryImage6VOA.jpg',
     },
-    { id: 7, source: './../../../assets/TaraPirayandeh.galleryImage7.jpg' },
-    { id: 8, source: './../../../assets/TaraPirayandeh.galleryImage2.jpg' },
+    { id: 7, source: './../../../assets/images/TaraPirayandeh.galleryImage7.jpg' },
+    { id: 8, source: './../../../assets/images/TaraPirayandeh.galleryImage2.jpg' },
   ];
 
   sotoon1 = this.galleryImages.filter((m) => m.id < 3);

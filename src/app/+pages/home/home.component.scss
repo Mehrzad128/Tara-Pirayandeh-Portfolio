@@ -1,5 +1,5 @@
 .container {
-  background-image: url(./../../../assets/blackBackground.JPEG);
+  background-image: url(./../../../assets/images/blackBackground.JPEG);
   background-image: fixed;
   background-size: contain;
 }
@@ -67,6 +67,22 @@ h1 {
 .subject-details {
   flex: 1 0.2 100%;
   margin: 0 50%;
+}
+
+mat-card-title {
+ margin-bottom: 8px;
+}
+
+.subject-details-container {
+  width: 80%;
+  margin: 0 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 16px; /* spacing between cards */
+}
+
+mat-card {
+  width: 100%;
 }
 
 .subject-details-handset {

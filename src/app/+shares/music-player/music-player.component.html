@@ -2,10 +2,7 @@
 <div class="wrapper-handset">
   <div class="details">
     <div class="img-box">
-      <img
-        loading="lazy"
-        src="./../../../assets/HD-wallpaper-fractal-serie-a-1-abstract-ink-swirl-flower-illusion-phone-flowers-fantasy-optical-water.jpg"
-      />
+      <img [src]="selectedItem.cover"/>
     </div>
     <div class="info">
       <h2>{{ selectedItem.name }}</h2>
@@ -28,7 +25,7 @@
     ></audio>
   </div>
   <div style="width: 100%">
-    <h1>vocals</h1>
+    <h1>Vocals</h1>
     <table
       mat-table
       [dataSource]="dataSource"
@@ -59,7 +56,7 @@
     </table>
   </div>
   <div style="width: 100%">
-    <h1>performances</h1>
+    <h1>Performances</h1>
     <table
       mat-table
       [dataSource]="dataSource"
@@ -108,7 +105,7 @@
     </div>
   </div>
   <div class="table">
-    <h1>vocals</h1>
+    <h1>Vocals</h1>
     <table
       mat-table
       [dataSource]="dataSource"
@@ -149,7 +146,7 @@
     </table>
   </div>
   <div class="table">
-    <h1>performances</h1>
+    <h1>Performances</h1>
     <table
       mat-table
       [dataSource]="dataSource"

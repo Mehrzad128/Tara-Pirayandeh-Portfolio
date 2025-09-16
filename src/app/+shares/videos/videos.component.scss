@@ -5,10 +5,11 @@
 }
 
 .photo{
-    background-image: url(./../../../assets/wp12025774-4k-169-wallpapers.jpg);
+    background-image: url(./../../../assets/images/TaraPirayandeh.galleryImage4VOA.jpg);
     background-size: cover;
     background-position: center ;
     position: relative;
+    border-radius: 5px;
     width: 100%;
     aspect-ratio: 16/9;
 }
@@ -34,11 +35,12 @@
 }
 
 .photo-handset{
-    background-image: url(./../../../assets/wp12025774-4k-169-wallpapers.jpg);
+    background-image: url(./../../../assets/images/TaraPirayandeh.galleryImage4VOA.jpg);
     background-size: cover;
     background-position: center ;
     position: relative;
     width: 100%;
+    border-radius: 5px;
     aspect-ratio: 16/9;
     height: auto;
     margin: 0 auto;
@@ -57,8 +59,12 @@
     opacity: 0.4;
 }
 
-.content{
+.content-async{
     margin-top: 1rem;
+}
+
+.content{
+    padding-right: 12px;
 }
 
 mat-card-subtitle{
