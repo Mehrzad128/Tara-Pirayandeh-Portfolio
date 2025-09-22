@@ -1,5 +1,5 @@
 .wrapper {
-  width: 60%;
+  width: 75%;
   padding: 25px 35px;
   text-align: center;
   background-color: #151618;
@@ -53,13 +53,22 @@
 
 .table {
   width: 48%;
-  padding: 0 1%;
+  margin: 0 1%;
+  background-color:rgba(26, 27, 31, 0.4);
+  border-radius:15px ;
 }
 
-.mat-mdc-table {
-  width: 100%;
-  max-height: 212px;
-  overflow: auto;
+.vocals {
+  width: 98%;
+  margin: 32px 1%;
+  background-color:rgba(26, 27, 31, 0.4);
+  border-radius:15px ;
+}
+
+.table-container{
+  height: 264px;
+  overflow:auto;
+  scrollbar-color: #5d606d rgba(0, 0, 0, 0.05);
 }
 
 audio {

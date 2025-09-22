@@ -18,7 +18,7 @@ $projectT-theme: mat.define-theme((
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;   scrollbar-color: #5d606d rgba(0, 0, 0, 0.05);}
 
 *{
   direction: ltr;
