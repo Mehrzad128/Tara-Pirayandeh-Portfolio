@@ -22,7 +22,7 @@ const performances: musicList[] = [
     name: 'Azizam',
     duration: '5:29',
     src: './../../../assets/songs/VID_20240323_121714_275.mp3',
-    cover: '',
+    cover: './../../../assets/images/disk.jpg',
   },
   {
     position: 2,
@@ -54,6 +54,30 @@ const performances: musicList[] = [
   },
 ];
 
+const vocals: musicList[] = [
+  {
+    position: 1,
+    name: 'Azizam',
+    duration: '5:29',
+    src: './../../../assets/songs/VID_20240323_121714_275.mp3',
+    cover: './../../../assets/images/disk.jpg',
+  },
+  {
+    position: 2,
+    name: 'Leili Savanam',
+    duration: '5:01',
+    src: './../../../assets/songs/leili bavanam 2-20-24.mp3',
+    cover: '',
+  },
+  {
+    position: 3,
+    name: 'Gash Sabakh',
+    duration: '4:22',
+    src: './../../../assets/songs/gash sabakh 2-19-24.mp3',
+    cover: '',
+  },
+];
+
 @Component({
   selector: 'app-music-player',
   standalone: true,
@@ -71,13 +95,13 @@ const performances: musicList[] = [
 export class MusicPlayerComponent {
   displayedColumns: string[] = ['position', 'name', 'duration'];
   dataSource = performances;
-  clickedRows = new Set<musicList>();
+  datasource2 = vocals;
   selectedItem: musicList = {
     name: 'Azizam',
     position: 1,
     duration: '5:29',
     src: './../../../assets/songs/VID_20240323_121714_275.mp3',
-    cover: '',
+    cover: './../../../assets/images/disk.jpg',
   };
 
   select(selected: musicList) {

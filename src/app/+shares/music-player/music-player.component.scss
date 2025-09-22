@@ -56,6 +56,12 @@
   padding: 0 1%;
 }
 
+.mat-mdc-table {
+  width: 100%;
+  max-height: 212px;
+  overflow: auto;
+}
+
 audio {
   width: 100%;
 }
@@ -68,6 +74,10 @@ audio {
 
 .mat-mdc-row:hover .mat-mdc-cell {
   border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
 }
 
 h2,
@@ -89,7 +99,7 @@ h1 {
     width: fit-content;
   }
   .img-box {
-    height: 8rem;
+    height: 6rem;
   }
 }
 
