@@ -18,13 +18,13 @@
   height: 80px;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 10000;
 }
 
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10000;
   padding-right: 0;
 }
 .spacer {
@@ -53,6 +53,7 @@
   position: relative;
   clip-path: inset(0 25%);
   -webkit-mask: linear-gradient(90deg, #0000, #000 25% 75%, #0000);
+  mask: none;
   cursor: pointer;
   transition: background-position 0.3s var(--_s, 0.3s),
     clip-path 0s var(--_s, 0.6s);
@@ -84,6 +85,7 @@
 .menu:focus-visible {
   clip-path: none;
   -webkit-mask: none;
+  mask: none;
   border: none;
   outline: 2px solid var(--c);
   outline-offset: 5px;

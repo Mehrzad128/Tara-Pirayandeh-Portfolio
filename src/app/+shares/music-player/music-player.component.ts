@@ -25,8 +25,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '5:29',
     album: '',
-    src: './../../../assets/songs/Azizam.mp3',
-    cover: './../../../assets/images/VOA cover.jpg',
+    src: './../../../assets/songs/Azizam.m4a',
+    cover: './../../../assets/images/VOA cover.avif',
   },
   {
     position: 2,
@@ -34,8 +34,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '5:01',
     album: '',
-    src: './../../../assets/songs/leili bavanam 2-20-24.mp3',
-    cover: './../../../assets/images/VOA cover.jpg',
+    src: './../../../assets/songs/leili-Savanam-2-20-24.m4a',
+    cover: './../../../assets/images/VOA cover.avif',
   },
   {
     position: 3,
@@ -43,8 +43,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '4:22',
     album: '',
-    src: './../../../assets/songs/gash sabakh 2-19-24.mp3',
-    cover: './../../../assets/images/VOA cover.jpg',
+    src: './../../../assets/songs/gash-sabakh-2-19-24.m4a',
+    cover: './../../../assets/images/VOA cover.avif',
   },
   {
     position: 4,
@@ -52,8 +52,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '5:00',
     album: '',
-    src: './../../../assets/songs/Fasle Gol 2-17-24.mp3',
-    cover: './../../../assets/images/VOA cover.jpg',
+    src: './../../../assets/songs/Fasle-Gol-2-17-24.m4a',
+    cover: './../../../assets/images/VOA cover.avif',
   },
   {
     position: 5,
@@ -61,8 +61,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '4:05',
     album: '',
-    src: './../../../assets/songs/Hey binam 2-19-24.mp3',
-    cover: './../../../assets/images/VOA cover.jpg',
+    src: './../../../assets/songs/Hey-binam-2-19-24.m4a',
+    cover: './../../../assets/images/VOA cover.avif',
   },
   {
     position: 6,
@@ -71,7 +71,7 @@ const musics: musicList[] = [
     duration: '2:55',
     album: '',
     src: './../../../assets/songs/Cant help falling in love.m4a',
-    cover: '',
+    cover: './../../../assets/images/RestlessOfLove.avif',
   },
   {
     position: 7,
@@ -79,8 +79,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '4:16',
     album: '',
-    src: './../../../assets/songs/Indigo night .m4a',
-    cover: '',
+    src: './../../../assets/songs/Indigo-night.m4a',
+    cover: './../../../assets/images/IndigoNightCover.avif',
   },
   {
     position: 8,
@@ -88,8 +88,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '5:12',
     album: '',
-    src: './../../../assets/songs/Habibi .m4a',
-    cover: '',
+    src: './../../../assets/songs/Habibi.m4a',
+    cover: './../../assets/images/HabibiCover.avif',
   },
   {
     position: 1,
@@ -97,8 +97,8 @@ const musics: musicList[] = [
     role: 'performance',
     album: '',
     duration: '7:19',
-    src: './../../../assets/songs/Restless of love.mp3',
-    cover: '',
+    src: './../../../assets/songs/Restless of love.m4a',
+    cover: './../../../assets/images/restless of love.avif',
   },
   {
     position: 2,
@@ -107,7 +107,7 @@ const musics: musicList[] = [
     album: '',
     duration: '3:40',
     src: './../../../assets/songs/Dashti ( Do zarbi ).m4a',
-    cover: '',
+    cover: './../../../assets/images/TaraPirayandeh-DashtiCover.avif',
   },
   {
     position: 3,
@@ -115,8 +115,8 @@ const musics: musicList[] = [
     role: 'performance',
     album: '',
     duration: '7:53',
-    src: './../../../assets/songs/cheshmeye noosh.mp3',
-    cover: '',
+    src: './../../../assets/songs/cheshmeye-noosh.m4a',
+    cover: './../../../assets/images/Cheshmeye Noosh.avif',
   },
   {
     position: 4,
@@ -124,8 +124,8 @@ const musics: musicList[] = [
     role: 'performance',
     album: '',
     duration: '7:04',
-    src: './../../../assets/songs/shooshtari atr afshan.mp3',
-    cover: '',
+    src: './../../../assets/songs/shooshtari atr afshan.m4a',
+    cover: 'assets/images/Atr afshan.avif',
   },
   {
     position: 5,
@@ -134,7 +134,7 @@ const musics: musicList[] = [
     album: '',
     duration: '5:03',
     src: './../../../assets/songs/Abuata( Ostad Jalil Shahnaz ).m4a',
-    cover: '',
+    cover: './../../../assets/images/TaraPirayandeh-AbuataCover.avif',
   },
   {
     position: 1,
@@ -142,8 +142,8 @@ const musics: musicList[] = [
     role: 'electric',
     album: 'The light',
     duration: '5:47',
-    src: './../../../assets/songs/Eclipse.mp3',
-    cover: './../../../assets/images/The Light album cover.jpg',
+    src: './../../../assets/songs/Eclipse.m4a',
+    cover: './../../../assets/images/The Light album cover.avif',
   },
   {
     position: 2,
@@ -151,8 +151,8 @@ const musics: musicList[] = [
     role: 'electric',
     album: 'The light',
     duration: '6:10',
-    src: './../../../assets/songs/Flow.mp3',
-    cover: './../../../assets/images/The Light album cover.jpg',
+    src: './../../../assets/songs/Flow.m4a',
+    cover: './../../../assets/images/The Light album cover.avif',
   },
   {
     position: 3,
@@ -160,8 +160,8 @@ const musics: musicList[] = [
     role: 'electric',
     album: 'The light',
     duration: '5:17',
-    src: './../../../assets/songs/Spark.mp3',
-    cover: './../../../assets/images/The Light album cover.jpg',
+    src: './../../../assets/songs/Spark.m4a',
+    cover: './../../../assets/images/The Light album cover.avif',
   },
   {
     position: 4,
@@ -169,8 +169,8 @@ const musics: musicList[] = [
     role: 'electric',
     album: 'The light',
     duration: '3:30',
-    src: './../../../assets/songs/Vision.mp3',
-    cover: './../../../assets/images/The Light album cover.jpg',
+    src: './../../../assets/songs/Vision.m4a',
+    cover: './../../../assets/images/The Light album cover.avif',
   },
 ];
 
@@ -210,8 +210,8 @@ onPause() {
     role: 'electric',
     album: 'The light',
     duration: '5:47',
-    src: './../../../assets/songs/Eclipse.mp3',
-    cover: './../../../assets/images/The Light album cover.jpg',
+    src: './../../../assets/songs/Eclipse.m4a',
+    cover: './../../../assets/images/The Light album cover.avif',
   };
 
   select(selected: musicList) {

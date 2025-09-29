@@ -26,20 +26,20 @@ export class GalleryComponent {
     );
 
   galleryImages: image[] = [
-    { id: 1, source: './../../../assets/images/TaraPirayandeh.galleryImage1.jpg' },
-    { id: 2, source: './../../../assets/images/TaraPirayandeh.galleryImage8.JPG' },
-    { id: 3, source: './../../../assets/images/TaraPirayandeh.galleryImage3.jpg' },
+    { id: 1, source: './../../../assets/images/TaraPirayandeh.galleryImage1.avif' },
+    { id: 2, source: './../../../assets/images/TaraPirayandeh.galleryImage8.avif' },
+    { id: 3, source: './../../../assets/images/TaraPirayandeh.galleryImage3.avif' },
     {
       id: 4,
-      source: './../../../assets/images/TaraPirayandeh.galleryImage4.JPG',
+      source: './../../../assets/images/TaraPirayandeh.galleryImage4.avif',
     },
-    { id: 5, source: './../../../assets/images/TaraPirayandeh.galleryImage5.jpg' },
+    { id: 5, source: './../../../assets/images/TaraPirayandeh.galleryImage5.avif' },
     {
       id: 6,
-      source: './../../../assets/images/TaraPirayandeh.galleryImage6VOA.jpg',
+      source: './../../../assets/images/TaraPirayandeh.galleryImage6VOA.avif',
     },
-    { id: 7, source: './../../../assets/images/TaraPirayandeh.galleryImage7.jpg' },
-    { id: 8, source: './../../../assets/images/TaraPirayandeh.galleryImage2.jpg' },
+    { id: 7, source: './../../../assets/images/TaraPirayandeh.galleryImage7.avif' },
+    { id: 8, source: './../../../assets/images/TaraPirayandeh.galleryImage2.avif' },
   ];
 
   sotoon1 = this.galleryImages.filter((m) => m.id < 3);
