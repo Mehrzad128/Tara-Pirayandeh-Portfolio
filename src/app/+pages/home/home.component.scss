@@ -1,5 +1,5 @@
 .container {
-  background-image: url(./../../../assets/images/blackBackground.avif);
+  background-image: url(./../../../assets/images/blackBackground.jpg);
   background-image: fixed;
   background-size: contain;
 }
@@ -17,25 +17,28 @@
 }
 
 .first-slide{
-  background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage2.jpg)
+  background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage3.jpg)
 }
 .second-slide{
   background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage1.jpg)
 }
 .third-slide{
-  background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage3.jpg)
+  background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage2.jpg)
 }
 
 @supports (background-image: url('image.avif')) {
+  .container {
+    background-image: url(./../../../assets/images/blackBackground.avif) ;
+  }
 
   .first-slide {
-    background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage2.avif);
+    background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage3.avif);
   }
   .second-slide {
     background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage1.avif);
   }
   .third-slide {
-    background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage3.avif);
+    background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage2.avif);
   }
 
 }

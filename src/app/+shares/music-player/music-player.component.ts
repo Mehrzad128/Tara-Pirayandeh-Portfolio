@@ -70,8 +70,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '2:55',
     album: '',
-    src: 'Cant-help-falling-in-love.m4a',
-    cover: 'RestlessOfLove',
+    src: 'Cant help falling in love.m4a',
+    cover: 'Cant-help-falling-in-love',
   },
   {
     position: 7,
@@ -111,7 +111,7 @@ const musics: musicList[] = [
   },
   {
     position: 3,
-    name: 'cheshmeye noosh',
+    name: 'Cheshmeye noosh',
     role: 'performance',
     album: '',
     duration: '7:53',
@@ -120,7 +120,7 @@ const musics: musicList[] = [
   },
   {
     position: 4,
-    name: 'shooshtari atr afshan',
+    name: 'Shooshtari atr afshan',
     role: 'performance',
     album: '',
     duration: '7:04',
