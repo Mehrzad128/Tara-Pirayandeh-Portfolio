@@ -42,15 +42,19 @@
 
 .img-box img {
   object-fit: cover;
+  height: 100%;
   flex: 1 0 100%;
   border-radius: 50%;
 }
 
-.img-box-rotating {
-  display: flex;
-  aspect-ratio: 1/1;
-  height: 10rem;
-  margin-right: 1rem;
+.img-box source {
+  object-fit: cover;
+  height: 100%;
+  flex: 1 0 100%;
+  border-radius: 50%;
+}
+
+.rotating {
   animation-name: spin;
   animation-duration: 8000ms;
   animation-iteration-count: infinite;
@@ -73,6 +77,12 @@
 }
 
 .info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.info-wrapper{
   width: 100%;
 }
 
@@ -132,27 +142,15 @@ h1 {
   text-align: center;
 }
 
-.hidden {
-  display: none;
-}
 
-@media screen and (max-width: 440px) {
-  .wrapper-handset {
+@media screen and (max-width: 600px) {
+  .details {
+    align-items: center;
+  }
+    .wrapper-handset {
     width: fit-content;
   }
   .img-box {
     height: 6rem;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .controler {
-    display: none;
-  }
-  .hidden {
-    display: block;
-  }
-  .details {
-    align-items: center;
   }
 }

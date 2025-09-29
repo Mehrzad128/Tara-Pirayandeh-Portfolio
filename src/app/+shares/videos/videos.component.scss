@@ -1,72 +1,78 @@
-.card{
-    margin-bottom: 100px;
-    width: 100%;
-    padding-bottom: 16px;
+.card {
+  margin-bottom: 100px;
+  width: 100%;
+  padding-bottom: 16px;
 }
 
-.photo{
+.photo {
+  background-image: url(./../../../assets/images/TaraPirayandehVideo.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+@supports (background-image: url('image.avif')) {
+  .photo {
     background-image: url(./../../../assets/images/TaraPirayandehVideo.avif);
-    background-size: cover;
-    background-position: center ;
-    position: relative;
-    border-radius: 5px;
-    width: 100%;
-    aspect-ratio: 16/9;
+  }
 }
 
-.play-logo{
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 6rem;
-    height: 6rem;
-    z-index: 5;
-    border-radius: 50%;
-    opacity: 0.4;
+.play-logo {
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6rem;
+  height: 6rem;
+  z-index: 5;
+  border-radius: 50%;
+  opacity: 0.4;
 }
 
-.card-handset{
-    margin-bottom: 100px;
-    width: 100%;
-    height: auto;
-    padding-bottom: 16px;
+.card-handset {
+  margin-bottom: 100px;
+  width: 100%;
+  height: auto;
+  padding-bottom: 16px;
 }
 
-.photo-handset{
-    background-image: url(./../../../assets/images/TaraPirayandehVideo.avif);
-    background-size: cover;
-    background-position: center ;
-    position: relative;
-    width: 100%;
-    border-radius: 5px;
-    aspect-ratio: 16/9;
-    height: auto;
-    margin: 0 auto;
+.photo-handset {
+  background-image: url(./../../../assets/images/TaraPirayandehVideo.avif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  aspect-ratio: 16/9;
+  height: auto;
+  margin: 0 auto;
 }
 
-.play-logo-handset{
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    z-index: 5;
-    border-radius: 50%;
-    opacity: 0.4;
+.play-logo-handset {
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  z-index: 5;
+  border-radius: 50%;
+  opacity: 0.4;
 }
 
-.content-async{
-    margin-top: 1rem;
+.content-async {
+  margin-top: 1rem;
 }
 
-.content{
-    padding-right: 12px;
+.content {
+  padding-right: 12px;
 }
 
-mat-card-subtitle{
-    margin-top: 2rem;
+mat-card-subtitle {
+  margin-top: 2rem;
 }

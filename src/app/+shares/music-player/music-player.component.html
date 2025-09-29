@@ -2,30 +2,50 @@
 <div class="wrapper-handset">
   <div class="details-handset">
     @if (isPlaying) {
-    <div class="img-box-rotating">
-      <img [src]="selectedItem.cover" />
+    <div class="img-box rotating">
+      <picture>
+        <source
+          type="image/avif"
+          [srcset]="'./../../../assets/images/' + selectedItem.cover + '.avif'"
+        />
+      <img [src]="'./../../../assets/images/' + selectedItem.cover + '.jpg'">
+      </picture>
     </div>
     } @else {
     <div class="img-box">
-      <img [src]="selectedItem.cover" />
+      <picture>
+        <source
+          type="image/avif"
+          [srcset]="'./../../../assets/images/' + selectedItem.cover + '.avif'"
+        />
+      <img [src]="'./../../../assets/images/' + selectedItem.cover + '.jpg'">
+      </picture>
     </div>
     }
     <div class="info">
-      <h2>{{ selectedItem.name }}</h2>
-      <div class="controler">
-        <audio
-          #audio
-          [src]="selectedItem.src"
-          controls
-          controlsList="nodownload"
-        ></audio>
+      <div class="info-wrapper">
+        <h2>{{ selectedItem.name }}</h2>
+        @if (isSmall$ | async) {
+        <div class="controler">
+          <audio
+            #audio
+            [src]="'./../../../assets/songs/' + selectedItem.src"
+            [autoplay]="isPlaying"
+            controls
+            (play)="onPlay()"
+            (pause)="onPause()"
+            controlsList="nodownload"
+          ></audio>
+        </div>
+        }
       </div>
     </div>
   </div>
-  <div class="controler hidden">
+  @if (!(isSmall$ | async)) {
+  <div class="controler">
     <audio
       #audio
-      [src]="selectedItem.src"
+      [src]="'./../../../assets/songs/' + selectedItem.src"
       [autoplay]="isPlaying"
       controls
       (play)="onPlay()"
@@ -33,6 +53,7 @@
       controlsList="nodownload"
     ></audio>
   </div>
+  }
   <div style="width: 100%">
     <h1>Vocals</h1>
     <div class="table-container">
@@ -131,26 +152,41 @@
 <div class="wrapper">
   <div class="details">
     @if (isPlaying) {
-    <div class="img-box-rotating">
-      <img [src]="selectedItem.cover" />
+    <div class="img-box rotating">
+      <picture>
+        <source
+          type="image/avif"
+          [srcset]="'./../../../assets/images/' + selectedItem.cover + '.avif'"
+        />
+      <img [src]="'./../../../assets/images/' + selectedItem.cover + '.jpg'">
+      </picture>
     </div>
     } @else {
     <div class="img-box">
-      <img [src]="selectedItem.cover" />
+      <picture>
+        <source
+          type="image/avif"
+          [srcset]="'./../../../assets/images/' + selectedItem.cover + '.avif'"
+        />
+      <img [src]="'./../../../assets/images/' + selectedItem.cover + '.jpg'">
+      </picture>
     </div>
     }
     <div class="info">
-      <h2>{{ selectedItem.name }}</h2>
-      <audio
-        #audio
-        class="controler"
-        [src]="selectedItem.src"
-        controls
-        (play)="onPlay()"
-        (pause)="onPause()"
-        [autoplay]="isPlaying"
-        controlsList="nodownload"
-      ></audio>
+      <div class="info-wrapper">
+        <h2>{{ selectedItem.name }}</h2>
+        <audio
+          #audio
+          class="controler"
+          [src]="'./../../../assets/songs/' + selectedItem.src"
+          type="audio/m4a"
+          controls
+          (play)="onPlay()"
+          (pause)="onPause()"
+          [autoplay]="isPlaying"
+          controlsList="nodownload"
+        ></audio>
+      </div>
     </div>
   </div>
   <div class="table">

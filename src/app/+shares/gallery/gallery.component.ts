@@ -26,20 +26,20 @@ export class GalleryComponent {
     );
 
   galleryImages: image[] = [
-    { id: 1, source: './../../../assets/images/TaraPirayandeh.galleryImage1.avif' },
-    { id: 2, source: './../../../assets/images/TaraPirayandeh.galleryImage8.avif' },
-    { id: 3, source: './../../../assets/images/TaraPirayandeh.galleryImage3.avif' },
+    { id: 1, source: 'TaraPirayandeh.galleryImage1' },
+    { id: 2, source: 'TaraPirayandeh.galleryImage8' },
+    { id: 3, source: 'TaraPirayandeh.galleryImage3' },
     {
       id: 4,
-      source: './../../../assets/images/TaraPirayandeh.galleryImage4.avif',
+      source: 'TaraPirayandeh.galleryImage4',
     },
-    { id: 5, source: './../../../assets/images/TaraPirayandeh.galleryImage5.avif' },
+    { id: 5, source: 'TaraPirayandeh.galleryImage5' },
     {
       id: 6,
-      source: './../../../assets/images/TaraPirayandeh.galleryImage6VOA.avif',
+      source: 'TaraPirayandeh.galleryImage6VOA',
     },
-    { id: 7, source: './../../../assets/images/TaraPirayandeh.galleryImage7.avif' },
-    { id: 8, source: './../../../assets/images/TaraPirayandeh.galleryImage2.avif' },
+    { id: 7, source: 'TaraPirayandeh.galleryImage7' },
+    { id: 8, source: 'TaraPirayandeh.galleryImage2' },
   ];
 
   sotoon1 = this.galleryImages.filter((m) => m.id < 3);

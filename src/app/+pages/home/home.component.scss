@@ -16,6 +16,31 @@
   aspect-ratio: 1/1;
 }
 
+.first-slide{
+  background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage2.jpg)
+}
+.second-slide{
+  background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage1.jpg)
+}
+.third-slide{
+  background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage3.jpg)
+}
+
+@supports (background-image: url('image.avif')) {
+
+  .first-slide {
+    background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage2.avif);
+  }
+  .second-slide {
+    background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage1.avif);
+  }
+  .third-slide {
+    background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage3.avif);
+  }
+
+}
+
+
 .wrapper > div {
   width: 100%;
   height: 100%;

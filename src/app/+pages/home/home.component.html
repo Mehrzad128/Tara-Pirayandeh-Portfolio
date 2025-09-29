@@ -1,40 +1,13 @@
 <div class="container">
   <div class="wrapper">
     @if (isHandset$ | async) {
-    <div
-      class="handset-ratio"
-      style="
-        background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage2.avif);
-      "
-    ></div>
-    <div
-      class="handset-ratio"
-      style="
-        background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage1.avif);
-      "
-    ></div>
-    <div
-      class="handset-ratio"
-      style="
-        background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage3.avif);
-      "
-    ></div>
+    <div class="handset-ratio first-slide"></div>
+    <div class="handset-ratio second-slide"></div>
+    <div class="handset-ratio third-slide"></div>
     } @else if (!(isHandset$ | async)) {
-    <div
-      style="
-        background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage2.avif);
-      "
-    ></div>
-    <div
-      style="
-        background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage1.avif);
-      "
-    ></div>
-    <div
-      style="
-        background-image: url(./../../../assets/images/TaraPirayandeh.sliderImage3.avif);
-      "
-    ></div>
+    <div class="first-slide"></div>
+    <div class="second-slide"></div>
+    <div class="third-slide"></div>
     }
   </div>
   <section class="subject">

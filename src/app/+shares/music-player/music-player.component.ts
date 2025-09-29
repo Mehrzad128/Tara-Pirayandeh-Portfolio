@@ -25,8 +25,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '5:29',
     album: '',
-    src: './../../../assets/songs/Azizam.m4a',
-    cover: './../../../assets/images/VOA cover.avif',
+    src: 'Azizam.m4a',
+    cover: 'VOA-cover',
   },
   {
     position: 2,
@@ -34,8 +34,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '5:01',
     album: '',
-    src: './../../../assets/songs/leili-Savanam-2-20-24.m4a',
-    cover: './../../../assets/images/VOA cover.avif',
+    src: 'leili-Savanam-2-20-24.m4a',
+    cover: 'VOA-cover',
   },
   {
     position: 3,
@@ -43,8 +43,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '4:22',
     album: '',
-    src: './../../../assets/songs/gash-sabakh-2-19-24.m4a',
-    cover: './../../../assets/images/VOA cover.avif',
+    src: 'gash-sabakh-2-19-24.m4a',
+    cover: 'VOA-cover',
   },
   {
     position: 4,
@@ -52,8 +52,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '5:00',
     album: '',
-    src: './../../../assets/songs/Fasle-Gol-2-17-24.m4a',
-    cover: './../../../assets/images/VOA cover.avif',
+    src: 'Fasle-Gol-2-17-24.m4a',
+    cover: 'VOA-cover',
   },
   {
     position: 5,
@@ -61,8 +61,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '4:05',
     album: '',
-    src: './../../../assets/songs/Hey-binam-2-19-24.m4a',
-    cover: './../../../assets/images/VOA cover.avif',
+    src: 'Hey-binam-2-19-24.m4a',
+    cover: 'VOA-cover',
   },
   {
     position: 6,
@@ -70,8 +70,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '2:55',
     album: '',
-    src: './../../../assets/songs/Cant help falling in love.m4a',
-    cover: './../../../assets/images/RestlessOfLove.avif',
+    src: 'Cant-help-falling-in-love.m4a',
+    cover: 'RestlessOfLove',
   },
   {
     position: 7,
@@ -79,8 +79,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '4:16',
     album: '',
-    src: './../../../assets/songs/Indigo-night.m4a',
-    cover: './../../../assets/images/IndigoNightCover.avif',
+    src: 'Indigo-night.m4a',
+    cover: 'IndigoNightCover',
   },
   {
     position: 8,
@@ -88,8 +88,8 @@ const musics: musicList[] = [
     role: 'vocal',
     duration: '5:12',
     album: '',
-    src: './../../../assets/songs/Habibi.m4a',
-    cover: './../../assets/images/HabibiCover.avif',
+    src: 'Habibi.m4a',
+    cover: 'HabibiCover',
   },
   {
     position: 1,
@@ -97,8 +97,8 @@ const musics: musicList[] = [
     role: 'performance',
     album: '',
     duration: '7:19',
-    src: './../../../assets/songs/Restless of love.m4a',
-    cover: './../../../assets/images/restless of love.avif',
+    src: 'Restless of love.m4a',
+    cover: 'restless-of-love',
   },
   {
     position: 2,
@@ -106,8 +106,8 @@ const musics: musicList[] = [
     role: 'performance',
     album: '',
     duration: '3:40',
-    src: './../../../assets/songs/Dashti ( Do zarbi ).m4a',
-    cover: './../../../assets/images/TaraPirayandeh-DashtiCover.avif',
+    src: 'Dashti ( Do zarbi ).m4a',
+    cover: 'TaraPirayandeh-DashtiCover',
   },
   {
     position: 3,
@@ -115,8 +115,8 @@ const musics: musicList[] = [
     role: 'performance',
     album: '',
     duration: '7:53',
-    src: './../../../assets/songs/cheshmeye-noosh.m4a',
-    cover: './../../../assets/images/Cheshmeye Noosh.avif',
+    src: 'cheshmeye-noosh.m4a',
+    cover: 'Cheshmeye-Noosh',
   },
   {
     position: 4,
@@ -124,8 +124,8 @@ const musics: musicList[] = [
     role: 'performance',
     album: '',
     duration: '7:04',
-    src: './../../../assets/songs/shooshtari atr afshan.m4a',
-    cover: 'assets/images/Atr afshan.avif',
+    src: 'shooshtari atr afshan.m4a',
+    cover: 'Atr-afshan',
   },
   {
     position: 5,
@@ -133,8 +133,8 @@ const musics: musicList[] = [
     role: 'performance',
     album: '',
     duration: '5:03',
-    src: './../../../assets/songs/Abuata( Ostad Jalil Shahnaz ).m4a',
-    cover: './../../../assets/images/TaraPirayandeh-AbuataCover.avif',
+    src: 'Abuata( Ostad Jalil Shahnaz ).m4a',
+    cover: 'TaraPirayandeh-AbuataCover',
   },
   {
     position: 1,
@@ -142,8 +142,8 @@ const musics: musicList[] = [
     role: 'electric',
     album: 'The light',
     duration: '5:47',
-    src: './../../../assets/songs/Eclipse.m4a',
-    cover: './../../../assets/images/The Light album cover.avif',
+    src: 'Eclipse.m4a',
+    cover: 'The-Light-album-cover',
   },
   {
     position: 2,
@@ -151,8 +151,8 @@ const musics: musicList[] = [
     role: 'electric',
     album: 'The light',
     duration: '6:10',
-    src: './../../../assets/songs/Flow.m4a',
-    cover: './../../../assets/images/The Light album cover.avif',
+    src: 'Flow.m4a',
+    cover: 'The-Light-album-cover',
   },
   {
     position: 3,
@@ -160,8 +160,8 @@ const musics: musicList[] = [
     role: 'electric',
     album: 'The light',
     duration: '5:17',
-    src: './../../../assets/songs/Spark.m4a',
-    cover: './../../../assets/images/The Light album cover.avif',
+    src: 'Spark.m4a',
+    cover: 'The-Light-album-cover',
   },
   {
     position: 4,
@@ -169,8 +169,8 @@ const musics: musicList[] = [
     role: 'electric',
     album: 'The light',
     duration: '3:30',
-    src: './../../../assets/songs/Vision.m4a',
-    cover: './../../../assets/images/The Light album cover.avif',
+    src: 'Vision.m4a',
+    cover: 'The-Light-album-cover',
   },
 ];
 
@@ -210,8 +210,8 @@ onPause() {
     role: 'electric',
     album: 'The light',
     duration: '5:47',
-    src: './../../../assets/songs/Eclipse.m4a',
-    cover: './../../../assets/images/The Light album cover.avif',
+    src: 'Eclipse.m4a',
+    cover: 'The-Light-album-cover',
   };
 
   select(selected: musicList) {
@@ -231,6 +231,13 @@ onPause() {
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
+    .pipe(
+      map((result) => result.matches),
+      shareReplay()
+    );
+
+    isSmall$: Observable<boolean> = this.breakpointObserver
+    .observe(Breakpoints.Small)
     .pipe(
       map((result) => result.matches),
       shareReplay()
