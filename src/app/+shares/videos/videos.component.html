@@ -1,67 +1,109 @@
 @if (isHandset$ | async) {
-<mat-card class="card-handset">
-  <mat-card-header>
-    <mat-card-title-group>
-      <div class="photo-handset">
-        <a href="https://ir.voanews.com/a/voa-farsi-new-year-performance-flower-season/7532712.html">
-          <button class="play-logo-handset" mat-fab>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="50px"
-              viewBox="0 -960 960 960"
-              width="50px"
-              fill="#e8eaed"
-            >
-              <path
-                d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"
-              />
-            </svg>
-          </button>
-        </a>
-      </div>
-    </mat-card-title-group>
-  </mat-card-header>
-  <mat-card-content class="content-async">
-    <mat-card-title>
-      Nobahar the VOA's special Nowruz festival
-    </mat-card-title>
-    <mat-card-subtitle>
-      Fasl Gol with the voices of Tara Pirayandeh and Reza Rokni in "Nobahar"
-      , special for Nowruz program of the Voice of America
-    </mat-card-subtitle>
-  </mat-card-content>
-</mat-card>
+<div class="container">
+  <mat-card class="card-handset">
+    <mat-card-header>
+      <mat-card-title-group>
+        <div class="photo-handset">
+          <a
+            href="https://ir.voanews.com/a/voa-farsi-new-year-performance-flower-season/7532712.html"
+          >
+            <button class="play-logo-handset" mat-fab>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="50px"
+                viewBox="0 -960 960 960"
+                width="50px"
+                fill="#e8eaed"
+              >
+                <path
+                  d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"
+                />
+              </svg>
+            </button>
+          </a>
+        </div>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content class="content-async">
+      <mat-card-title>
+        Nobahar the VOA's special Nowruz festival
+      </mat-card-title>
+          <mat-card-subtitle>
+            "Fasl Gol" with the voices of Tara Pirayandeh and Reza Rokni is one of many special items in
+            "Nobahar" festival , special for Nowruz program of the Voice of America. For other performances
+            check the link below
+          </mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+    <div class="footer">
+    <a href="https://ir.voanews.com/p/9294.html">
+      <button mat-button>
+        About VOA
+        <mat-icon>open_in_new</mat-icon>
+      </button>
+    </a>
+    <a
+      href="https://en.wikipedia.org/wiki/Voice_of_America_Persian_News_Network"
+    >
+      <button mat-button>
+        Nobahar festival
+        <mat-icon>open_in_new</mat-icon>
+      </button>
+    </a>
+  </div>
+</div>
 } @else if (!(isHandset$ | async)) {
-<mat-card class="card">
-  <mat-card-header>
-    <mat-card-title-group>
-      <div class="content">
-        <mat-card-title>
-          Nobahar the VOA's special Nowruz festival
-        </mat-card-title>
-        <mat-card-subtitle>
-          Fasl Gol with the voices of Tara Pirayandeh and Reza Rokni in "Nobahar"
-          , special for Nowruz program of the Voice of America
-        </mat-card-subtitle>
-      </div>
-      <div class="photo">
-        <a href="https://ir.voanews.com/a/voa-farsi-new-year-performance-flower-season/7532712.html">
-          <button class="play-logo" mat-fab>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="50px"
-              viewBox="0 -960 960 960"
-              width="50px"
-              fill="#e8eaed"
-            >
-              <path
-                d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"
-              />
-            </svg>
-          </button>
-        </a>
-      </div>
-    </mat-card-title-group>
-  </mat-card-header>
-</mat-card>
+<div class="container">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <div class="content">
+          <mat-card-title>
+            Nobahar the VOA's special Nowruz festival
+          </mat-card-title>
+          <mat-card-subtitle>
+            "Fasl Gol" with the voices of Tara Pirayandeh and Reza Rokni is one of many special items in
+            "Nobahar" festival , special for Nowruz program of the Voice of America. For other performances
+            check the link below
+          </mat-card-subtitle>
+        </div>
+        <div class="photo">
+          <a
+            href="https://ir.voanews.com/a/voa-farsi-new-year-performance-flower-season/7532712.html"
+          >
+            <button class="play-logo" mat-fab>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="50px"
+                viewBox="0 -960 960 960"
+                width="50px"
+                fill="#e8eaed"
+              >
+                <path
+                  d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"
+                />
+              </svg>
+            </button>
+          </a>
+        </div>
+      </mat-card-title-group>
+    </mat-card-header>
+  </mat-card>
+  <div class="footer">
+    <a href="https://ir.voanews.com/p/9294.html">
+      <button mat-button>
+        read about VOA
+        <mat-icon>open_in_new</mat-icon>
+      </button>
+    </a>
+    <a
+      href="https://en.wikipedia.org/wiki/Voice_of_America_Persian_News_Network"
+    >
+      <button mat-button>
+        Nobahar other special items
+        <mat-icon>open_in_new</mat-icon>
+      </button>
+    </a>
+  </div>
+</div>
 }

@@ -8,6 +8,8 @@
 
 .sidenav {
   width: 25%;
+  border-radius: 0;
+  border-right: 3px #39393b solid;
 }
 
 .sidenav-Handset {
@@ -111,4 +113,14 @@ p {
   width: 100%;
   text-align: center;
   margin: 0;
+}
+
+@media screen and (max-width: 450px) {
+  .name {
+    font-size: large;
+  }
+  .icon{
+    height: 36px;
+    width: 36px;
+  }
 }
