@@ -138,11 +138,11 @@ const musics: musicList[] = [
   },
   {
     position: 1,
-    name: 'Eclipse',
+    name: 'Spark',
     role: 'electric',
     album: 'The light',
-    duration: '5:47',
-    src: 'Eclipse.m4a',
+    duration: '5:17',
+    src: 'Spark.m4a',
     cover: 'The-Light-album-cover',
   },
   {
@@ -156,11 +156,11 @@ const musics: musicList[] = [
   },
   {
     position: 3,
-    name: 'Spark',
+    name: 'Eclipse',
     role: 'electric',
     album: 'The light',
-    duration: '5:17',
-    src: 'Spark.m4a',
+    duration: '5:47',
+    src: 'Eclipse.m4a',
     cover: 'The-Light-album-cover',
   },
   {
@@ -206,11 +206,11 @@ onPause() {
 
   selectedItem: musicList =   {
     position: 1,
-    name: 'Eclipse',
+    name: 'Spark',
     role: 'electric',
     album: 'The light',
-    duration: '5:47',
-    src: 'Eclipse.m4a',
+    duration: '5:17',
+    src: 'Spark.m4a',
     cover: 'The-Light-album-cover',
   };
 
