@@ -16,6 +16,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { GalleryComponent } from '../../+shares/gallery/gallery.component';
 import { VideosComponent } from '../../+shares/videos/videos.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { ReScoreComponent } from "../../+shares/re-score/re-score.component";
 
 export interface Tile {
   color: string;
@@ -38,7 +39,8 @@ export interface Tile {
     GalleryComponent,
     VideosComponent,
     MatDividerModule,
-  ],
+    ReScoreComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

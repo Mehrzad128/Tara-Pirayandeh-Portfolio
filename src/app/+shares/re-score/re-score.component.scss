@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.video-player {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.description {
+  padding: 0.5rem;
+  position: relative;
+  margin-left: 2rem;
+  line-height: 1.5rem;
+}
+
+.description:last-child {
+    margin-bottom: 1rem;
+}
+
+.icon {
+  position: absolute;
+  left: -1.2rem;
+}
+
+.sub {
+    margin-bottom: 0.5rem;
+}

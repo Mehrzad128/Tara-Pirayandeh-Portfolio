@@ -159,6 +159,24 @@
       <button mat-button>Awards and Honors</button>
     </a>
   </section>
+  @if (!(isHandset$ | async)) {
+  <section class="subject">
+    <h1>Re-Scores</h1>
+    <div class="re-score-details">
+      <app-re-score />
+    </div>
+  </section>
+
+  } @else if (isHandset$ | async) {
+  <section class="subject">
+    <h1>Re-Scores</h1>
+    <div class="subject-details-handset">
+      <app-re-score />
+    </div>
+  </section>
+  }
+
+  <h1 style="text-align: center; margin: 0;"> Musics </h1>
   <app-music-player />
   <section class="subject">
     @if (isHandset$ | async) {
